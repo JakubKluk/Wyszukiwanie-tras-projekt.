@@ -1,0 +1,30 @@
+V.0.1
+Info:
+-Programem który bêdziemy u¿ywaæ do pisana kodu bêdzie Clion
+-Jest darmowy na okres studiów
+-Bardziej ograniêty ni¿ darmowy Code::Blocks
+
+Instalacja i konfiguracja:
+1)wchodzimy na stronê: https://www.jetbrains.com/student/
+2)odnajdujemy przycisk "apply now"
+3)postêpujemy wed³ug instrukcji ze strony i czekamy na link do pobrania
+4)na stronie: https://account.jetbrains.com/licenses
+	znajduj¹ siê nasze wszystkie oprogramowania do pobrania, gdzie klikamy napis "download" i wybieramy "Clion"
+5)W instalatorze wybieramy œcie¿kê instalacji(najlepiej domyœlna)
+6)Jeœli chcemy zaznaczamy tworzenie ikony skrótu na pulpicie i powi¹zanie z wszystkimi plikami(najlepiej)
+7)Klikamy Install
+8)Po instalacji uruchamiamy œrodowisko(musimy przeczytaæ umowê i aktywowaæ licencjê)
+9)Wa¿ne! w oknie "costumize clion wybieramy "next toolchains" i dodajemy "MinGW"
+10)Wyœwietli siê okno konfiguracji toolchaina, klikamy "download", nastêpnie na otwartej stronie "instalation:sourceforge"
+11)Rozpocznie siê pobieranie MinGW, instalujemy pobrany plik (chwilê to trwa...)
+   (jeszcze nie jestem do koñca pewien co do konfiguracji tego :D  )
+12)W Clionie wybieramy œcie¿kê do naszego minGW, domyœlnie:  "C:\Program Files (x86)\mingw-w64\i686-7.3.0-posix-dwarf-rt_v5-rev0\mingw32"
+13)Clion powinien wykryæ minGW i resztê (c++ compiler itp.
+14)resztê mo¿emy przeskipowaæ "skip remaining and set default"
+15)Powinno siê odpaliæ oknienko "welcome to clion"
+
+Konfiguracja programu z Gita/g³ówne funkcjonalnoœci:
+1)... to be continued...
+
+P.S. Mo¿ecie przetestowaæ jakieœ proste programy abu ogarn¹æ trochê IDE
+	New->C++Executable->C++14->Create->Czekamy na build->Run(zielony trójk¹t, prawy górny róg)
