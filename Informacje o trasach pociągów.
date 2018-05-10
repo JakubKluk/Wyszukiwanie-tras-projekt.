@@ -35,18 +35,18 @@
 				czas :
 
 4.  Kraków - Kraków Główny			Połączenie: Katowice, Kielce, Warszawa, Rzeszów
-				Kraków - Kraków Główny - Katowice(stacja kolejowa)
-					od :
-					czas :
-				Kraków - Kraków Główny - Kielce(stacja kolejowa)
-				 	od :
-					czas :
-				Kraków - Kraków Główny - Warszawa Centralna
-					od :
-					czas :
-				Kraków - Kraków Główny - Rzeszów Główny
-					od :
-					czas :
+			Kraków - Kraków Główny - Katowice(stacja kolejowa)
+				od :
+				czas :
+			Kraków - Kraków Główny - Kielce(stacja kolejowa)
+			 	od :
+				czas :
+			Kraków - Kraków Główny - Warszawa Centralna
+				od :
+				czas :
+			Kraków - Kraków Główny - Rzeszów Główny
+				od :
+				czas :
 
 5.  Rzeszów - Rzeszów Główny			Połączenie: Kraków, Lublin
  			Rzeszów - Rzeszów Główny - Kraków Główny
@@ -65,21 +65,21 @@
 				czas :
 
 7.  Poznań - Poznań Główny			Połączenie: Zielona Góra, Szczecin, Bydgoszcz, Warszawa, Wrocław
-					Poznań Główny - Zielona Góra(stacja kolejowa)
-						od :
-						czas :
-					Poznań Główny - Szczecin Główny
-						od :
-						czas :
-					Poznań Główny - Bydgoszcz Główny
-						od :
-						czas :
-					Poznań Główny - Warszawa Centralna
-						od :
-						czas :
-					Poznań Główny - Wrocław Główny
-						od :
-						czas :
+				Poznań Główny - Zielona Góra(stacja kolejowa)
+					od :
+					czas :
+				Poznań Główny - Szczecin Główny
+					od :
+					czas :
+				Poznań Główny - Bydgoszcz Główny
+					od :
+					czas :
+				Poznań Główny - Warszawa Centralna
+					od :
+					czas :
+				Poznań Główny - Wrocław Główny
+					od :
+					czas :
 
 8.  Łódź - Łódź Fabryczna			Połączenie: Wrocław, Warszawa, Bydgoszcz
 				Łódź Fabryczna - Wrocław Główny
@@ -93,89 +93,89 @@
 					czas :
 
 9.  Kielce - Kielce(stacja kolejowa)		Połączenie: Warszawa, Kraków
-			Kielce(stacja kolejowa) - Warszawa Centralna
-				od :
-				czas :
-			Kielce(stacja kolejowa) - Kraków Główny
-				od :
-				czas :
+				Kielce(stacja kolejowa) - Warszawa Centralna
+					od :
+					czas :
+				Kielce(stacja kolejowa) - Kraków Główny
+					od :
+					czas :
 
 10. Lublin - Lublin(stacja kolejowa) 		Połączenie: Rzeszów, Warszawa
-			Lublin(stacja kolejowa) - Rzeszów Główny
-				od :
-				czas :
-			Lublin(stacja kolejowa) - Warszawa Centralna
-				od :
-				czas :
+				Lublin(stacja kolejowa) - Rzeszów Główny
+					od :
+					czas :
+				Lublin(stacja kolejowa) - Warszawa Centralna
+					od :
+					czas :	
 
 11. Bydgoszcz - Bydgoszcz Główna		Połączenie: Gdańsk, Łódź, Poznań
-			Bydgoszcz Główna - Gdańsk Główny
-				od :
-				czas :
-			Bydgoszcz Główna - Łódź Fabryczna
-				od :
-				czas :
-			Bydgoszcz Główna - Poznań Główny
-				od :
-				czas :
+				Bydgoszcz Główna - Gdańsk Główny
+					od :
+					czas :
+				Bydgoszcz Główna - Łódź Fabryczna
+					od :
+					czas :
+				Bydgoszcz Główna - Poznań Główny
+					od :
+					czas :
 
 12. Warszawa - Warszawa Centralna		Połączenie: Poznań, Łódź, Kraków, Kielce, Lublin, Białystok, Gdańsk, Olsztyn
-			Warszawa Centralna - Poznań Główny
-				od :
-				czas :
-			Warszawa Centralna - Łódź Fabryczna
-				od :
-				czas :
-			Warszawa Centralna - Kraków Główny
-				od :
-				czas :
-			Warszawa Centralna - Kielce(stacja kolejowa)
-				od :
-				czas :
-			Warszawa Centralna - Lublin Główny
-				od :
-				czas :
-			Warszawa Centralna - Białystok(stacja kolejowa)
-				od :
-				czas :
-			Warszawa Centralna - Gdańśk Główny
-				od :
-				czas :
-			Warszawa Centralna - Olsztyn Główny
-				od :
-				czas :
+				Warszawa Centralna - Poznań Główny
+					od :
+					czas :
+				Warszawa Centralna - Łódź Fabryczna
+					od :
+					czas :
+				Warszawa Centralna - Kraków Główny
+					od :
+					czas :
+				Warszawa Centralna - Kielce(stacja kolejowa)
+					od :
+					czas :
+				Warszawa Centralna - Lublin Główny
+					od :
+					czas :
+				Warszawa Centralna - Białystok(stacja kolejowa)
+					od :
+					czas :
+				Warszawa Centralna - Gdańśk Główny
+					od :
+					czas :
+				Warszawa Centralna - Olsztyn Główny
+					od :
+					czas :
 
 13. Szczecin - Szczecin Główny			Połączenie: Poznań, Gdańsk
-			Szczecin Główny - Poznań Główny
-				od :
-				czas :
-			Szczecin Główny - Gdańsk Główny
-				od :
-				czas :
+				Szczecin Główny - Poznań Główny
+					od :
+					czas :
+				Szczecin Główny - Gdańsk Główny
+					od :
+					czas :
 
 14. Gdańsk - Gdańsk Główny			Połączenie: Szczecin, Warszawa, Bydgoszcz, Olsztyn
-			Gdańsk Główny - Szczecin Główny
-				od :
-				czas :
-			Gdańsk Główny - Warszawa Centralna
-				od :
-				czas :
-			Gdańsk Główny - Bydgoszcz Główny
-				od :
-				czas :
-			Gdańsk Główny - Olsztyn Główny
-				od :
-				czas :
-
+				Gdańsk Główny - Szczecin Główny
+					od :
+					czas :
+				Gdańsk Główny - Warszawa Centralna
+					od :
+					czas :
+				Gdańsk Główny - Bydgoszcz Główny
+					od :
+					czas :
+				Gdańsk Główny - Olsztyn Główny
+					od :
+					czas :
+	
 15. Olsztyn - Olsztyn Główny			Połączenie: Gdańsk, Warszawa
-			Olsztyn Główny - Gdańśk Główny
-				od :
-				czas :
-			Olsztyn Główny - Warszawa Centralna
-				od :
-				czas :
+				Olsztyn Główny - Gdańśk Główny
+					od :
+					czas :
+				Olsztyn Główny - Warszawa Centralna
+					od :
+					czas :	
 
 16. Białystok - Białystok(stacja kolejowa)	Połączenie: Warszawa
-			Białystok(stacja kolejowa) - Warszawa Centralna
-				od :
-				czas :
+				Białystok(stacja kolejowa) - Warszawa Centralna
+					od :
+					czas :
