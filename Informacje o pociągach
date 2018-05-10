@@ -1,0 +1,76 @@
+Tutaj podam informacje o wszystkich lokomotywach, które są na wyposażeniu poszczególnych przewoźników.
+Na początku podam inforamcje o lokomotywach z jakich te firmy korzystają, potem podam liczbę wagonów, a na końcu podam stan innych
+      - zespołów trakcyjnych wykorzystywanych przez te firmy.
+Wszystkie informacje pochodzą z wikipedii, ponieważ ze stron przewoźników mało co można się dowiedzieć
+Problem z lokomotywami jest taki że każda z nich może sobie przyłaczyć tyle wagonów ile potrzebuje, więc nie ma stałej ilości
+wagonów co do lokomotywy pod którą jedzie. 
+
+PKP Intercity:
+  LOKOMOTYWY:
+    *Lokomotywy elektryczne:
+      -EU07         Liczba: 87     prędkość maksymalna: 125km/h
+      -EU07A        Liczba: 3      prędkość maksymalna: 160km/h
+      -EP07         Liczba: 150    prędkość maksymalna: 125km/h
+      -EP08         Liczba: 9      prędkość maksymalna: 140km/h
+      -EP09         Liczba: 46     prędkość maksymalna: 160km/h
+      -EU44 Husarz  Liczba: 10     prędkość maksymalna: 230km/h
+      
+    *Lokomotywy spalinowe:
+      -SM42 6D      Liczba: 30     prędkość maksymalna: 90km/h
+      -SM42 18D     Liczba: 10     prędkość maksymalna: 90km/h
+      -SU42 6DI     Liczba: 10     prędkość maksymalna: 90km/h
+      -SU160 Gama   Liczba: 10     prędkość maksymalna: 160km/h
+      
+  INFORAMCJE O WAGONACH (stan na kwiecień 2017, zakladając że Wikipedia nie kłamie):
+PKP Intercity posiada 2315 wagonów z czego 60,9% to wagony 2 klasy, a 22,2% to wagony 1 klasy. 
+169 z nich była przystosowana do prędkości 200km/h, a 1675 do prędkości 160 km/h.
+
+W listopadzie jedynie 1306 wagonów z 2315 na stanie miała ważny przegląd techniczny.
+
+  ZESPOŁY TRAKCYJNE (tutaj będzie już dużo łatwiej, ponieważ każdy zespół ma stałą ilość wagonów):
+    *Elektryczne 
+      -ED74 Bydgostia
+        liczba na stanie: 14
+        liczba człon(k)ów: 4
+        liczba miejsc:
+          2 klasa: 161+8
+          1 klasa: 33
+          dla niepełnosprawnych: 2
+        bufet: NIE
+        dostęp Wi-Fi: NIE
+        prędkość maksymalna: 160km/h
+      -ED160 Flirt^3
+        liczba na stanie: 20
+        liczba członów: 8
+        liczba miejsc:
+          2 klasa: 296+4
+          1 klasa: 60
+          dla niepełnosprawnych: 2
+        bufet: TAK
+        dostęp Wi-Fi: TAK
+        prędkość maksymalna: 160km/h
+      -ED161 Dart
+        liczba na stanie: 20
+        liczba członów: 8
+        liczba miejsc:
+          2 klasa: 296
+          1 klasa: 60
+          dla niepełnosprawnych: 2
+        bufet: TAK
+        dostęp Wi-Fi: TAK
+        prędkość maksymalna: 160km/h
+      -ED250 Pendolino
+        liczba na stanie: 20
+        liczba członów: 7
+        liczba miejsc:
+          2 klasa: 355
+          1 klasa: 45
+          dla niepełnosprawnych: 2
+        bufet: TAK
+        dostęp Wi-Fi: NIE
+        prędkość maksymalna: 250km/h
+        
+To by było na tyle jeśli chodzi o PKP Intercity. Jeśli ten styl iformacji odpowiada wam to w najbliższych dniach zrobię podobny 
+materiał o reszcie przewoźników.
+
+Bardzo proszę o komentarze z ewentualnymi poprawkami albo poradami co mógłbym zmienić/dodać
