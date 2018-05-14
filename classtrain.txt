@@ -1,0 +1,27 @@
+Klasa train bedzie zawierac podstawowe informacje na temat pociagów,
+bed¹ to miedzy innymi:
+nazwa,
+ilosc,
+predkosc maksymalna,
+spalinowa czy elektryczna,
+liczba czlonow,
+ilosc miejsc w klasie 2,
+ilosc miejsc w klasie 1,
+czy zawiera bufet czy nie,
+miejsca dla niepelnosprawnych,
+dostepnosc WI-FI,
+trasy jakie beda pokonywac
+Oprocz tego nasza klasa bedzie zawierac metody, ktore ulatwia dostep do danych:
+wyswietl nazwa,
+wyswietl ilosc,
+wyswietl predkosc max,
+wyswietl czy spalinowa czy elektryczna,
+wyswietl liczba czlonow,
+wyswietl ilosc miejsc w klasie 1 i 2,
+wyswietl czy ma bufet,
+wyswietl czy ma miejsca dla niepelnosprawnych,
+wyswietl czy ma dostep do WI-FI,
+wyswietl wszystkie trasy jakie pokonuje ten pociag
+
+Tak zdefiniowana klasa powinna na pocztek zaspokoic nasze oczekiwania dotyczace informacji o pociagach jakie bedziemy umieszczac w naszej wyszukiwarce.
+Caly kod zostanie napisany obiektowo w C++.
