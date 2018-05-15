@@ -1,0 +1,181 @@
+1.  Wrocław - Wrocław Główny   			Połączenie: Opole, Zielona Góra , Poznań, Łódź
+			Wrocław Główny - Opole Główny
+				od :	84,4 km
+				czas :	52 min
+			Wrocław Główny - Zielona Góra(stacja kolejowa)
+				od :	163 km
+				czas :	151 min
+			Wrocław Główny - Poznań Główny
+				od :	161 km
+				czas :	118 min
+			Wrocław Główny - Łódź Fabryczna
+				od :	202 km
+				czas :	265 min
+
+2.  Opole - Opole Główny			Połączenie: Wrocław, Katowice
+			Opole Główny - Wrocław Główny
+				od :	84,4 km
+				czas :	52 min
+			Opole Główny - Katowice(stacja kolejowa)
+				od :	96,8 km
+				czas :	105 min
+
+3.  Katowice - Katowice(stacja kolejowa)	Połączenie: Opole, Kraków, Łódź, Warszawa
+			Katowice(stacja kolejowa) - Opole Główny
+				od :	84,4 km
+				czas :	52 min
+			Katowice(stacja kolejowa) - Kraków Główny
+				od :	77,4 km
+				czas:	86 min
+			Katowice(stacja kolejowa) - Łódź Fabryczna
+				od :	194 km
+				czas :	238 min
+			Katowice(stacja kolejowa) - Warszawa Centralna
+				od :	291 km
+				czas :	166 min
+
+4.  Kraków - Kraków Główny			Połączenie: Katowice, Kielce, Warszawa, Rzeszów
+			Kraków - Kraków Główny - Katowice(stacja kolejowa)
+				od :	77,4 km
+				czas :	101 min
+			Kraków - Kraków Główny - Kielce(stacja kolejowa)
+			 	od :	117 km
+				czas :	119 min
+			Kraków - Kraków Główny - Warszawa Centralna
+				od :	286 km
+				czas :	151 min
+			Kraków - Kraków Główny - Rzeszów Główny
+				od :	164 km
+				czas :	137 min
+
+5.  Rzeszów - Rzeszów Główny			Połączenie: Kraków, Lublin
+ 			Rzeszów - Rzeszów Główny - Kraków Główny
+				od :	164 km
+				czas :	137 min
+			Rzeszów - Rzeszów Główny - Lublin(stacja kolejowa)
+				od :	170 km
+				czas :	262 min
+
+6.  Zielona Góra - Zielona Góra(stacja kolejowa)Połączenie: Wrocław, Poznań
+			Zielona Góra(stacja kolejowa) - Wrocław Główny
+				od :	160 km
+				czas :	182 min
+			Zielona Góra(stacja kolejowa) - Poznań Główny
+				od :	123 km
+				czas :	98 min
+
+7.  Poznań - Poznań Główny			Połączenie: Zielona Góra, Szczecin, Bydgoszcz, Warszawa, Wrocław
+			Poznań Główny - Zielona Góra(stacja kolejowa)
+				od :	123 km
+				czas :	98 min
+			Poznań Główny - Szczecin Główny
+				od :	218 km
+				czas :	151 min
+			Poznań Główny - Bydgoszcz Główny
+				od :	121 km
+				czas :	93 min
+			Poznań Główny - Warszawa Centralna
+				od :	297 km
+				czas :	227 min
+			Poznań Główny - Wrocław Główny
+				od :	161 km
+				czas :	130 min
+
+8.  Łódź - Łódź Fabryczna			Połączenie: Wrocław, Warszawa, Bydgoszcz
+			Łódź Fabryczna - Wrocław Główny
+				od :	202 km
+				czas :	207 min
+			Łódź Fabryczna - Warszawa Centralna
+				od :	128 km
+				czas :	117 min
+			Łódź Fabryczna - Bydgoszcz Główny
+				od :	197 km
+				czas :	242 min
+
+9.  Kielce - Kielce(stacja kolejowa)		Połączenie: Warszawa, Kraków
+			Kielce(stacja kolejowa) - Warszawa Centralna
+				od :	171 km
+				czas :	170 min
+			Kielce(stacja kolejowa) - Kraków Główny
+				od :	117 km
+				czas :	119 min
+
+10. Lublin - Lublin(stacja kolejowa) 		Połączenie: Rzeszów, Warszawa
+			Lublin(stacja kolejowa) - Rzeszów Główny
+				od :	170 km
+				czas :	262 min
+			Lublin(stacja kolejowa) - Warszawa Centralna
+				od :	168 km
+				czas :	210 min
+
+11. Bydgoszcz - Bydgoszcz Główna		Połączenie: Gdańsk, Łódź, Poznań
+			Bydgoszcz Główna - Gdańsk Główny
+				od :	155 km
+				czas :	115 min
+			Bydgoszcz Główna - Łódź Fabryczna
+				od :	197 km
+				czas :	242 min
+			Bydgoszcz Główna - Poznań Główny
+				od :	141 km
+				czas :	93 min
+
+12. Warszawa - Warszawa Centralna		Połączenie: Poznań, Łódź, Kraków, Kielce, Lublin, Białystok, Gdańsk, Olsztyn
+			Warszawa Centralna - Poznań Główny
+				od :	297 km
+				czas :	227 min
+			Warszawa Centralna - Łódź Fabryczna
+				od :	128 km
+				czas :	117 min
+			Warszawa Centralna - Kraków Główny
+				od :	286 km
+				czas :	151 min
+			Warszawa Centralna - Kielce(stacja kolejowa)
+				od :	171 km
+				czas :	170 min
+			Warszawa Centralna - Lublin Główny
+				od :	168 km
+				czas :	210 min
+			Warszawa Centralna - Białystok(stacja kolejowa)
+				od :	192 km
+				czas :	133 min
+			Warszawa Centralna - Gdańśk Główny
+				od :	323 km
+				czas :	170 min
+			Warszawa Centralna - Olsztyn Główny
+				od :	200 km
+				czas :	174 min
+
+13. Szczecin - Szczecin Główny			Połączenie: Poznań, Gdańsk
+			Szczecin Główny - Poznań Główny
+				od :	218 km
+				czas :	151 min
+			Szczecin Główny - Gdańsk Główny
+				od :	340 km
+				czas :	296 min
+
+14. Gdańsk - Gdańsk Główny			Połączenie: Szczecin, Warszawa, Bydgoszcz, Olsztyn
+			Gdańsk Główny - Szczecin Główny
+				od :	340 km
+				czas :	296 min
+			Gdańsk Główny - Warszawa Centralna
+				od :	323 km
+				czas :	170 min
+			Gdańsk Główny - Bydgoszcz Główny
+				od :	155 km
+				czas :	115 min
+			Gdańsk Główny - Olsztyn Główny
+				od :	202 km
+				czas :	162 min
+	
+15. Olsztyn - Olsztyn Główny			Połączenie: Gdańsk, Warszawa
+			Olsztyn Główny - Gdańśk Główny
+				od :	202 km
+				czas :	162 min
+			Olsztyn Główny - Warszawa Centralna
+				od :	200 km
+				czas :		174 min
+
+16. Białystok - Białystok(stacja kolejowa)	Połączenie: Warszawa
+			Białystok(stacja kolejowa) - Warszawa Centralna
+				od :	192 km
+				czas :	133 min
