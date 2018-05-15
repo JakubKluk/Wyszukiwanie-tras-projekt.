@@ -1,0 +1,13 @@
+Nasza classa "trasa" będzie miała za zadanie odnajdywanie połączeń pomiędzy miastami i udostępnianie infirmacji o nich,
+a więc będzie musiała zawierać pola prywatne z odpowiednimi danymi:
+- stacja początkowa
+- stacja końcowa
+Oraz konstruktor, który będzie wypełniał te dwa pola stacjami podanymi przez użytkownika.
+Prócz tego classa ta powinna posiadać pola prywatne wypełniane przez program danymi znalezionymi
+na podstawie stacji początkowej i końcowej w bazie danych:
+ - godzina odjazdu
+ - czas podróży
+ - odległość pomiędzy stacjami
+ - rodzaj pociągu
+ Ponad to classa ta będzie musiałą udostępniać publiczne metody, które pozwolą użytkownikowi na odczytanie tych danych,
+ oraz na ewentualną zmianę parametrów podróży.
