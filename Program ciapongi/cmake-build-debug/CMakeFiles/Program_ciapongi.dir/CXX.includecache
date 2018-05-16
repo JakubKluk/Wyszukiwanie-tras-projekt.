@@ -1,0 +1,20 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+../include/ciapong.hpp
+iostream
+-
+
+C:/Users/Kuba/Desktop/ciapongi/Program ciapongi/main.cpp
+iostream
+-
+
+C:/Users/Kuba/Desktop/ciapongi/Program ciapongi/src/ciapong.cpp
+ciapong.hpp
+C:/Users/Kuba/Desktop/ciapongi/Program ciapongi/src/ciapong.hpp
+

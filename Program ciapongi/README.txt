@@ -1,0 +1,1 @@
+Aby za³adowaæ projekt w Clion klikamy "open" i zaznaczamy folder "Program ciapongi", potem "OK"

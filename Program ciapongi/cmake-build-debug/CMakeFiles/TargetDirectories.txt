@@ -1,0 +1,3 @@
+C:/Users/Kuba/Desktop/ciapongi/Program ciapongi/cmake-build-debug/CMakeFiles/Program_ciapongi.dir
+C:/Users/Kuba/Desktop/ciapongi/Program ciapongi/cmake-build-debug/CMakeFiles/edit_cache.dir
+C:/Users/Kuba/Desktop/ciapongi/Program ciapongi/cmake-build-debug/CMakeFiles/rebuild_cache.dir
