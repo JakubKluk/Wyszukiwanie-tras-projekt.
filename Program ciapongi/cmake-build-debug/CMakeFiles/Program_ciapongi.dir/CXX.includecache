@@ -11,10 +11,14 @@ iostream
 -
 
 C:/Users/Kuba/Desktop/ciapongi/Program ciapongi/main.cpp
+ciapong.hpp
+C:/Users/Kuba/Desktop/ciapongi/Program ciapongi/ciapong.hpp
 iostream
 -
 
 C:/Users/Kuba/Desktop/ciapongi/Program ciapongi/src/ciapong.cpp
 ciapong.hpp
 C:/Users/Kuba/Desktop/ciapongi/Program ciapongi/src/ciapong.hpp
+fstream
+-
 

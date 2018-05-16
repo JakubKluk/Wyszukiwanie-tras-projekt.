@@ -29,4 +29,18 @@ private:
     std::string _tours;
 };
 
+class Station
+{
+public:
+    Station(int number, std::string name_s):_number(number),_name_s(name_s){} //Tworzy obiekt stacji
+    int getNumber(){return _number;} //Zwraca numer staci
+    std::string getNameStation(){return _name_s;} //Zwraca nazwę stacji
+private:
+    int _number;
+    std::string _name_s;
+};
+
+Station find_station(std::string name_to_find);
+
+
 #endif //PROGRAM_CIAPONGI_CIAPONG_HPP
