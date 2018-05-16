@@ -1,0 +1,10 @@
+1
+Krakow_Glowny
+2
+Lublin
+3
+Tarnow
+4
+Warszawa_Centralna
+5
+Wachock
