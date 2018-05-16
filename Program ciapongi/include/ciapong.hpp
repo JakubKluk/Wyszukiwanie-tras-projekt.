@@ -6,6 +6,9 @@
 #define PROGRAM_CIAPONGI_CIAPONG_HPP
 
 #include <iostream>
+#include <fstream>
+#include <cstdlib>
+#include <string>
 
 class Train
 {
@@ -41,6 +44,73 @@ private:
 };
 
 Station find_station(std::string name_to_find);
+
+class Trasa
+{
+public:
+    Trasa(stacja poczatkowa, stacja koncowa) : _poczatkowa(poczatkowa), _koncowa(koncowa)
+    {
+       std::fstream plik;
+       std::string stacja1;
+       std::string stacja2;
+       std::ostringstream oss;
+       std::ostringstream oss2;
+       std::string pocz;
+       plik.open("Trasa - baza danych.txt", ios::in);
+       if(plik.good() == true)
+       {
+            while(!plik.eof())
+            {
+                getline(plik, pocz);
+                if(pocz == "Z:")
+                {
+                    getline(plik, stacja1);
+                }
+                if(stacja1 == _poczatkowa.getNameStation())
+                {
+                    getline(plik, pocz);
+                    getline(plik, stacja2);
+                    if(stacja2 == _koncowa.getNameStation())
+                    {
+                        getline(plik, pocz);
+                        getline(plik, pocz);
+                        oss << pocz << ":";
+                        getline(plik, pocz);
+                        oss << pocz;
+                        _odjazd = oss.str();
+                        getline(plik, pocz);
+                        getline(plik, pocz);
+                        oss2 << pocz << ":";
+                        getline(plik, pocz);
+                        oss2 << pocz
+                        _przyjazd = oss2.str();
+                        getline(plik, pocz);
+                        getline(plik, pocz);
+                        _odleglosc = pocz;
+                        getline(plik, pocz);
+                        getline(plik, pocz);
+                        _nazwa_pociagu = pocz;
+                    }
+                }
+            }
+       }
+    }
+    std::string get_pocz() const {return _poczatkowa;}
+    std::string get_konc() const {return _koncowa;}
+    std::string get_odjazd() const {return _odjazd;}
+    std::string get_przyjazd() const {return _przyjazd;}
+    std::string get_odleglosc() const {return _odleglosc;}
+    std::string get_pociag() const {return _nazwa_pociagu;}
+private:
+    Stacja _poczatkowa;
+    Stacja _koncowa;
+    std::string _odjazd;
+    std::string _przyjazd;
+    std::string _odleglosc;
+    std::string _nazwa_pociagu;
+    Train _rodzaj;
+};
+
 
 
 #endif //PROGRAM_CIAPONGI_CIAPONG_HPP
