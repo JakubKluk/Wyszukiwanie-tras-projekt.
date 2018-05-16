@@ -1,0 +1,70 @@
+#include <iostream>
+#include <fstream>
+#include <cstdlib>
+#include <string>
+
+class trasa
+{
+public:
+    trasa(stacja poczatkowa, stacja koncowa) : _poczatkowa(poczatkowa), _koncowa(koncowa)
+    {
+       std::fstream plik;
+       std::string stacja1;
+       std::string stacja2;
+       std::ostringstream oss;
+       std::ostringstream oss2;
+       std::string pocz;
+       plik.open("Trasa - baza danych.txt", ios::in);
+       if(plik.good() == true)
+       {
+            while(!plik.eof())
+            {
+                getline(plik, pocz);
+                if(pocz == "Z:")
+                {
+                    getline(plik, stacja1);
+                }
+                if(stacja1 == hhhhhhhh)    //Uzupełnić metodą zwracającą nazwę stacji początkowej.
+                {
+                    getline(plik, pocz);
+                    getline(plik, stacja2);
+                    if(stacja2 == hhhhhh)  //Uzupełnić metodą zwracającą nazwę stacji końcowej.
+                    {
+                        getline(plik, pocz);
+                        getline(plik, pocz);
+                        oss << pocz << ":";
+                        getline(plik, pocz);
+                        oss << pocz;
+                        _odjazd = oss.str();
+                        getline(plik, pocz);
+                        getline(plik, pocz);
+                        oss2 << pocz << ":";
+                        getline(plik, pocz);
+                        oss2 << pocz
+                        _przyjazd = oss2.str();
+                        getline(plik, pocz);
+                        getline(plik, pocz);
+                        _odleglosc = pocz;
+                        getline(plik, pocz);
+                        getline(plik, pocz);
+                        _nazwa_pociagu = pocz;
+                    }
+                }
+            }
+       }
+    }
+    std::string get_pocz() const {return _poczatkowa;}
+    std::string get_konc() const {return _koncowa;}
+    std::string get_odjazd() const {return _odjazd;}
+    std::string get_przyjazd() const {return _przyjazd;}
+    std::string get_odleglosc() const {return _odleglosc;}
+    std::string get_pociag() const {return _nazwa_pociagu;}
+private:
+    stacja _poczatkowa;
+    stacja _koncowa;
+    std::string _odjazd;
+    std::string _przyjazd;
+    std::string _odleglosc;
+    std::string _nazwa_pociagu;
+    pociag _rodzaj;
+};
