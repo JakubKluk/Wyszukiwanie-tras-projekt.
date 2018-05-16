@@ -45,70 +45,69 @@ private:
 
 Station find_station(std::string name_to_find);
 
-class Trasa
-{
+class Route
 public:
-    Trasa(stacja poczatkowa, stacja koncowa) : _poczatkowa(poczatkowa), _koncowa(koncowa)
+    Route(Station initial, Station Final) : _initial(initial), _final(Final)
     {
-       std::fstream plik;
-       std::string stacja1;
-       std::string stacja2;
+       std::fstream file;
+       std::string station1;
+       std::string station2;
        std::ostringstream oss;
        std::ostringstream oss2;
-       std::string pocz;
-       plik.open("Trasa - baza danych.txt", ios::in);
-       if(plik.good() == true)
+       std::string line;
+       file.open("Trasa - baza danych.txt", std::ios::in);
+       if(file.good() == true)
        {
-            while(!plik.eof())
+            while(!file.eof())
             {
-                getline(plik, pocz);
-                if(pocz == "Z:")
+                getline(file, line);
+                if(line == "Z:")
                 {
-                    getline(plik, stacja1);
+                    getline(file, station1);
                 }
-                if(stacja1 == _poczatkowa.getNameStation())
+                if(station1 == _initial.getNameStation())
                 {
-                    getline(plik, pocz);
-                    getline(plik, stacja2);
-                    if(stacja2 == _koncowa.getNameStation())
+                    getline(file, line);
+                    getline(file, station2);
+                    if(station2 == _final.getNameStation())
                     {
-                        getline(plik, pocz);
-                        getline(plik, pocz);
-                        oss << pocz << ":";
-                        getline(plik, pocz);
-                        oss << pocz;
-                        _odjazd = oss.str();
-                        getline(plik, pocz);
-                        getline(plik, pocz);
-                        oss2 << pocz << ":";
-                        getline(plik, pocz);
-                        oss2 << pocz
-                        _przyjazd = oss2.str();
-                        getline(plik, pocz);
-                        getline(plik, pocz);
-                        _odleglosc = pocz;
-                        getline(plik, pocz);
-                        getline(plik, pocz);
-                        _nazwa_pociagu = pocz;
+                        getline(file, line);
+                        getline(file, line);
+                        oss << line << ":";
+                        getline(file, line);
+                        oss << line;
+                        _departure = oss.str();
+                        getline(file, line);
+                        getline(file, line);
+                        oss2 << line << ":";
+                        getline(file, line);
+                        oss2 << line
+                        _arrival = oss2.str();
+                        getline(file, line);
+                        getline(file, line);
+                        _distance = line;
+                        getline(file, line);
+                        getline(file, line);
+                        _name = line;
                     }
                 }
             }
        }
     }
-    std::string get_pocz() const {return _poczatkowa;}
-    std::string get_konc() const {return _koncowa;}
-    std::string get_odjazd() const {return _odjazd;}
-    std::string get_przyjazd() const {return _przyjazd;}
-    std::string get_odleglosc() const {return _odleglosc;}
-    std::string get_pociag() const {return _nazwa_pociagu;}
+    std::string get_initial() const {return _initial;}
+    std::string get_final() const {return _final;}
+    std::string get_departure() const {return _departure;}
+    std::string get_arrival() const {return _arrival;}
+    std::string get_distance() const {return _distance;}
+    std::string get_name() const {return _name;}
 private:
-    Stacja _poczatkowa;
-    Stacja _koncowa;
-    std::string _odjazd;
-    std::string _przyjazd;
-    std::string _odleglosc;
-    std::string _nazwa_pociagu;
-    Train _rodzaj;
+    Station _initial;
+    Station _final;
+    std::string _departure;
+    std::string _arrival;
+    std::string _distance;
+    std::string _name;
+    Train _train;
 };
 
 
