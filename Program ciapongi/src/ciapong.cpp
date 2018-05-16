@@ -23,12 +23,14 @@
 
         if (line==name_to_find){
             Station s(line_nr/2,name_to_find);
+            plik_s.close();                         //Zamyka plik
             return s;
         }
         line_nr++;
     }
-
-    plik_s.close();//Zamyka plik
+    Station s(0,"");
+    plik_s.close();
+    return s;
     //PROSTY PRZYKŁADOWY PROGRAM WYUSZKIWANIA W PLIKU STACJE.TXT,
     // WYKORZYTUJĄCY STWORZENIE KLASY, JEJ METODY I FUNKCJĘ find_station
 
