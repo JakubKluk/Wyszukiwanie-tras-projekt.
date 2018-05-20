@@ -47,66 +47,21 @@ private:
 
 Station find_station(std::string name_to_find);
 
-class Route
+class Route : public Train, public Station {
 public:
-    Route(Station initial, Station Final) : _initial(initial), _final(Final)
-    {
-       std::fstream file;
-       std::string station1;
-       std::string station2;
-       std::ostringstream oss;
-       std::ostringstream oss2;
-       std::string line;
-       file.open("Trasa - baza danych.txt", std::ios::in);
-       if(file.good() == true)
-       {
-            while(!file.eof())
-            {
-                getline(file, line);
-                if(line == "Z:")
-                {
-                    getline(file, station1);
-                }
-                if(station1 == _initial.getNameStation())
-                {
-                    getline(file, line);
-                    getline(file, station2);
-                    if(station2 == _final.getNameStation())
-                    {
-                        getline(file, line);
-                        getline(file, line);
-                        oss << line << ":";
-                        getline(file, line);
-                        oss << line;
-                        _departure = oss.str();
-                        getline(file, line);
-                        getline(file, line);
-                        oss2 << line << ":";
-                        getline(file, line);
-                        oss2 << line
-                        _arrival = oss2.str();
-                        getline(file, line);
-                        getline(file, line);
-                        _distance = line;
-                        getline(file, line);
-                        getline(file, line);
-                        _name = line;
-                    }
-                }
-            }
-       }
-    }
-    std::string get_initial() const {return _initial;}
-    std::string get_final() const {return _final;}
-    std::string get_departure() const {return _departure;}
-    std::string get_arrival() const {return _arrival;}
-    std::string get_distance() const {return _distance;}
-    std::string get_name() const {return _name;}
+    Route(Station initial, Station Final, std::vector<int> departure, std::vector<int> arrival, float distance, std::string name, Train train) : _initial(initial), _final(Final), _departure(departure), _arrival(arrival), _distance(distance), _name(name), _train(Train) {}
+    Station get_initial() const {return _initial;}   //Zwraca obiekt klasy 'Station' odwołujący się do stacji początkowej.
+    Station get_final() const {return _final;}      //Zwraca obiekt klasy 'Station' odwołujący się do stacji końcowej.
+    std::vector<int> get_departure() const {return _departure;}      //Zwraca godzinę odjazdu.
+    std::vector<int> get_arrival() const {return _arrival;}      //Zwraca godzinę przyjazdu.
+    float get_distance() const {return _distance;}        //Zwraca odległość.
+    std::string get_name() const {return _name;}        //Zwraca nazwę pociągu.
+    Train get_train() const {return _train;}        //Zwraca obiekt klasy 'train' kursujący na tej trasie.
 private:
     Station _initial;
     Station _final;
-    std::string _departure;
-    std::string _arrival;
+    std::vector<int> _departure;
+    std::vector<int> _arrival;
     std::string _distance;
     std::string _name;
     Train _train;
