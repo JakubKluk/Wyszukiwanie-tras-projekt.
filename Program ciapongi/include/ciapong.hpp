@@ -13,18 +13,19 @@
 class Train
 {
 public:
-    Train(std::string name, double amount, double speedMax, double amount_members, double firstclass, double secondclass, std::string accessWIFI, std::string tours) : _name(name), _amount(amount),  _speedMax(speedMax), _amount_members(amount_members), _firstclass(firstclass), _secondclass(secondclass), _accessWIFI(accessWIFI), _tours(tours) {}
+    Train(std::string name, double amount,int days, double speedMax, double amount_members, double firstclass, double secondclass, std::string accessWIFI, std::string tours) : _name(name), _amount(amount), _days(days),  _speedMax(speedMax), _amount_members(amount_members), _firstclass(firstclass), _secondclass(secondclass), _accessWIFI(accessWIFI), _tours(tours) {}
     std::string get_name(){ return  _name;}
-    double get_amount() {return _amount;}
-    double get_speedMax(){return _speedMax;}
-    double get_amount_members(){return _amount_members;}
-    double get_firstclass(){return _firstclass;}
-    double get_secondclass(){return _secondclass;}
-    std::string get_accessWIFI(){return _accessWIFI;}
-    std::string get_alltours(){return _tours;}
+    double get_amount() {return _amount;} //liczba pociagow, ktora dysponujemy
+    double get_speedMax(){return _speedMax;} //moze byc uzyte do wyznaczenia czasu trwania podrozy
+    double get_amount_members(){return _amount_members;} //ilosc doczepianych wagonow
+    double get_firstclass(){return _firstclass;} //ilosc miejsc w klasie pierwszej
+    double get_secondclass(){return _secondclass;} //ilosc miejsc w klasie drugiej
+    std::string get_accessWIFI(){return _accessWIFI;} //dostep do wifi
+    std::string get_alltours(){return _tours;} //zwraca wszystkie trasy tego pociagu(ta metode mozna zmienic jak cos)
 private:
     std::string _name;
     double _amount;
+    int _days;
     double _speedMax;
     double _amount_members;
     double _firstclass;
