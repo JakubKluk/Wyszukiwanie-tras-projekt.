@@ -36,7 +36,21 @@
 
 }
 
+Route find_tour(std:: string start, std::string  end)//przekazujemy nazwy miast(stacji) z której chcemy jechac i gdzie dojechac
+{
+  auto number_start = find_station(start).getNumber();
+  auto number_end = find_station(end).getNumber();
 
+  std::fstream plik_s;
+  plik_s.open("pociagi.txt", std::ios::in);
+  if(plik_s.good()==false)
+  {
+      std::cout<<"Nie ma pliku"<<std::endl;
+      exit(0);
+  }
+//ciag dalszy nastapi
+
+}
 
 
 
