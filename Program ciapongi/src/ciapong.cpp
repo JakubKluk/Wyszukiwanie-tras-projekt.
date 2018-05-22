@@ -34,6 +34,7 @@
     //PROSTY PRZYKŁADOWY PROGRAM WYUSZKIWANIA W PLIKU STACJE.TXT,
     // WYKORZYTUJĄCY STWORZENIE KLASY, JEJ METODY I FUNKCJĘ find_station
 
+   exit(0);
 }
 
 int find_class(const std::string& name)
@@ -62,7 +63,6 @@ int find_class(const std::string& name)
     std::cout<<"Nie ma takiego pociągu"<<std::endl;     //jeśli nie znajdziemy nazwy naszego pociągu, zamykamy plik i kończymy program
     exit(0);
 }
-
 
 Route find_tour(std:: string start, std::string  end)//przekazujemy nazwy miast(stacji) z której chcemy jechac i gdzie dojechac
 {
