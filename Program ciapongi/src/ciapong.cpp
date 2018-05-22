@@ -52,7 +52,7 @@ int find_class(const std::string& name)
         if(line==name)
         {
             getline(file, line);                        //Każdy getline przesuwa pobieranie tekstu o jedną linijkę w dół. Po znalezieniu nazwy jesteśmy na linijce "CLASS", więc musimy przesunąć się o linijkę niżej
-            grtline(file, line);
+            getline(file, line);
             int i;
             i = std::stoi(line);                        //Konwersja std::string na int przy użyciu funkcji biblioteki standardowej
             file.close();                               //zamknięcie pliku
@@ -80,7 +80,7 @@ Route find_tour(std:: string start, std::string  end)//przekazujemy nazwy miast(
 
 }
 
-Void check_train(std::string start, std::string end, int day, int time, int trainclass ) //stacja poczatkowa-koncowa, dzien, godzina i klasa ktore nas interesuja
+void check_train(std::string start, std::string end, int day, int time, int trainclass ) //stacja poczatkowa-koncowa, dzien, godzina i klasa ktore nas interesuja
 {
     Route _route=find_tour(start,end);                  // zwraca nam trase na wyszukiwanych stacjach
     std::string _name=_route.get_name();                // zwraca nam nazwe pociagu na tej trasie

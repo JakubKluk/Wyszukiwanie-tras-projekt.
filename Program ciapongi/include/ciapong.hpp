@@ -9,6 +9,7 @@
 #include <fstream>
 #include <cstdlib>
 #include <string>
+#include <vector>
 
 class Train
 {
@@ -49,25 +50,29 @@ Station find_station(std::string name_to_find);
 
 class Route : public Train, public Station {
 public:
-    Route(Station initial, Station Final, std::vector<int> departure, std::vector<int> arrival, float distance, std::string name, Train train) : _initial(initial), _final(Final), _departure(departure), _arrival(arrival), _distance(distance), _name(name), _train(Train) {}
+    Route(Station initial, Station Final, std::vector<int> departure_hour, std::vector<int> departure_minute, std::vector<int> arrival_hour, std::vector<int> arrival_minute, float distance, std::string name, Train train) : _initial(initial), _final(Final), _departure_hour(departure_hour), _departure_minute(departure_minute), _arrival_hour(arrival_hour),_arrival_minute(arrival_minute), _distance(distance), _name(name), _train(Train) {}
     Station get_initial() const {return _initial;}   //Zwraca obiekt klasy 'Station' odwołujący się do stacji początkowej.
     Station get_final() const {return _final;}      //Zwraca obiekt klasy 'Station' odwołujący się do stacji końcowej.
-    std::vector<int> get_departure() const {return _departure;}      //Zwraca godzinę odjazdu.
-    std::vector<int> get_arrival() const {return _arrival;}      //Zwraca godzinę przyjazdu.
+    std::vector<int> get_departure_hour() const {return _departure_hour;}      //Zwraca godzinę odjazdu.
+    std::vector<int> get_departure_minute() const {return _departure_minute;}      //Zwraca minutę odjazdu.
+    std::vector<int> get_arrival_hour() const {return _arrival_hour;}      //Zwraca godzinę przyjazdu.
+    std::vector<int> get_arrival_minute() const {return _arrival_minute;}      //Zwraca minutę przyjazdu.
     float get_distance() const {return _distance;}        //Zwraca odległość.
     std::string get_name() const {return _name;}        //Zwraca nazwę pociągu.
     Train get_train() const {return _train;}        //Zwraca obiekt klasy 'train' kursujący na tej trasie.
 private:
     Station _initial;
     Station _final;
-    std::vector<int> _departure;
-    std::vector<int> _arrival;
-    std::string _distance;
+    std::vector<int> _departure_hour;
+    std::vector<int> _departure_minute;
+    std::vector<int> _arrival_hour;
+    std::vector<int> _arrival_minute;
+    float _distance;
     std::string _name;
     Train _train;
 };
 
 int find_class(const std::string& name);    //Funkcja wyszukuje klasę podanego pociągu.
 Route find_tour(Station _start, Station _end);//funkcja wyszukuje danej trasy za pomoca informacji o stacji poczatkowej i koncowej
-Void check_train(Station start, Station end, int day, int time, int trainclass ); // funkcja sprawdzajaca jakie pociagi pasuja do zapytania
+void check_train(Station start, Station end, int day, int time, int trainclass ); // funkcja sprawdzajaca jakie pociagi pasuja do zapytania
 #endif //PROGRAM_CIAPONGI_CIAPONG_HPP
