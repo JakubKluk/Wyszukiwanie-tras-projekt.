@@ -40,7 +40,11 @@ Route find_tour(std:: string start, std::string  end)//przekazujemy nazwy miast(
 {
   auto number_start = find_station(start).getNumber();
   auto number_end = find_station(end).getNumber();
-
+                //zmieniam liczby na stringi
+  std::string station_first = std::to_string(number_start);
+  std::string station_end = std::to_string(number_end);
+  std::vector<string> good_trains;
+  std::string line;
   std::fstream plik_s;
   plik_s.open("pociagi.txt", std::ios::in);
   if(plik_s.good()==false)
@@ -48,7 +52,26 @@ Route find_tour(std:: string start, std::string  end)//przekazujemy nazwy miast(
       std::cout<<"Nie ma pliku"<<std::endl;
       exit(0);
   }
-//ciag dalszy nastapi
+
+    while(getline(plik_s),line)
+  {
+
+      if(line == station_first)
+      {
+          while(true)
+          {
+              if (line != 'END_STATION' and line == station_end) {
+
+                  {
+
+                  }
+              }
+          }
+      }
+
+
+  }
+
 
 }
 
