@@ -79,3 +79,27 @@ Route find_tour(std:: string start, std::string  end)//przekazujemy nazwy miast(
 //ciag dalszy nastapi
 
 }
+
+Void check_train(std::string start, std::string end, int day, int time, int trainclass ) //stacja poczatkowa-koncowa, dzien, godzina i klasa ktore nas interesuja
+{
+    Route _route=find_tour(start,end);                  // zwraca nam trase na wyszukiwanych stacjach
+    std::string _name=_route.get_name();                // zwraca nam nazwe pociagu na tej trasie
+    int _trainclass,_time,_day,_arrivetime;             // zmienne ktore beda porownywane do tych wpisanych na poczatku
+    _trainclass=find_class(_name);     // zwrocenie klasy poprzez funkcje
+
+    //tutaj bedzie sprawdzenie czy klasa pociagu zgadza sie z nasza
+
+    _day=*nazwafunkcjidooczytudnikursowania*(_name);    // zwrocenie dni kursowania poprzez funkcje
+
+    //tutaj bedzie sprawdzenie czy dni zgadzaja sie z naszym dniem
+
+    _time=_route.get_departure();                       // zwrocenie czasu odjazu pociagu
+    //tutaj bedzie sprawdzenie czy odjazd bedzie po godzinie ktora nas interesuje
+
+    _arrivetime=_route.get_arrival();                   //zwrocenie czasu przyjazdu do stacji docelowej
+
+    //jesli wszystko sie bedzie zgadzalo to wyswietli sie komunikat:
+    std::cout<<" Pociag z "<<start<<" do "<<end<<" w dniu "<<day<<" odjezdza o godz "<<_time<<" i na stacji docelowej bedzie o"<<_arrivetime<< std::endl;
+
+}
+
