@@ -67,6 +67,7 @@ private:
     Train _train;
 };
 
+int find_class(const std::string& name);    //Funkcja wyszukuje klasę podanego pociągu.
 Route find_tour(Station _start, Station _end);//funkcja wyszukuje danej trasy za pomoca informacji o stacji poczatkowej i koncowej
 
 #endif //PROGRAM_CIAPONGI_CIAPONG_HPP
