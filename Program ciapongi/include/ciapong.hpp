@@ -9,6 +9,7 @@
 #include <fstream>
 #include <cstdlib>
 #include <string>
+#include <vector>
 
 class Train
 {
