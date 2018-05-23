@@ -49,7 +49,7 @@ Station find_station(std::string name_to_find);
 
 class Route : public Train, public Station {
 public:
-    Route(Station initial, Station Final, std::vector<int> departure_hour,std::vector<int> departure_minute, std::vector<int> arrival_hour, std::vector<int> arrival_minute, float distance, std::string name, Train train) : _initial(initial), _final(Final), _departure_hour(departure_hour),_departure_minute(departure_minute), _arrival_hour(arrival_hour), _arrival_minute(arrival_minute), _distance(distance), _name(name), _train(Train) {}
+    Route(Station initial, Station Final, std::vector<int>& departure_hour,std::vector<int>& departure_minute, std::vector<int>& arrival_hour, std::vector<int>& arrival_minute, float distance, std::string name, Train train) : _initial(initial), _final(Final), _departure_hour(departure_hour),_departure_minute(departure_minute), _arrival_hour(arrival_hour), _arrival_minute(arrival_minute), _distance(distance), _name(name), _train(Train) {}
     Station get_initial() const {return _initial;}   //Zwraca obiekt klasy 'Station' odwołujący się do stacji początkowej.
     Station get_final() const {return _final;}      //Zwraca obiekt klasy 'Station' odwołujący się do stacji końcowej.
     std::vector<int> get_departure_hour() const {return _departure_hour;}      //Zwraca godzinę odjazdu.

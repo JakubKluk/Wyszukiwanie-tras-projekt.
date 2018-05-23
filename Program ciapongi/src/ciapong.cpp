@@ -126,12 +126,16 @@ std::vector<Route> find_tour(Station start, Station finish){
     plik_s.close();
     int classa;
     std::vector<Route> route_train;
-    std::vector<int> _departure;
-    std::vector<int> _arrival;
+    std::vector<int> _departure_hour;
+    std::vector<int> _departure_minute;
+    std::vector<int> _arrival_hour;
+    std::vector<int> _arrival_minute;
     std::string _name;
     std::vector<Train> trains;
-    int __departure;
-    int __arrival;
+    int __departure_hour;
+    int __arrival_hour;
+    int __departure_minute;
+    int __arrival_minute;
     plik_s.open("ciapongi.txt", std::ios::in);
     if(plik_s.good()==false)
     {
@@ -159,22 +163,24 @@ std::vector<Route> find_tour(Station start, Station finish){
                         getline(plik_s,new_line);
                         getline(plik_s,new_line);
                         getline(plik_s,new_line);
-                        std::string time_departure;
-                        time_departure = new_line;
-                        time_departure += ':';
+                        std::string time_departure_hour;
+                        time_departure_hour = new_line;
+                        __departure_hour = atoi(time_departure_hour.c_str());
                         getline(plik_s,new_line);
-                        time_departure +=new_line;
-                        __departure = atoi(time_departure.c_str());
-                        getline(plik_s,new_line);
+                        std::string time_departure_minute;
+                        time_departure_minute=new_line;
+                        __departure_minute = atoi(time_departure_minute.c_str());
                         if(new_line == finish_station)
                         {
                             getline(plik_s,new_line);
-                            std::string time_arrival;
-                            time_arrival = new_line;
+                            std::string time_arrival_hour;
+                            time_arrival_hour = new_line;
+                            __arrival_hour = atoi(time_arrival_hour.c_str());
                             getline(plik_s,new_line);
-                            time_arrival += ':';
-                            time_arrival += new_line;
-                            __arrival = atoi(time_arrival.c_str());
+                            std::string time_arrival_minute;
+                            time_arrival_minute = new_line;
+                            __arrival_minute = atoi(time_arrival_minute.c_str());
+                            getline(plik_s,new_line);
                         }
 
 
@@ -184,11 +190,13 @@ std::vector<Route> find_tour(Station start, Station finish){
                 }
             }
         }
-        _departure.push_back(__departure);
-        _arrival.push_back(__arrival);
-        Train i(_name, classa);
-        Route i(Station start, Station finish, _departure, _arrival, 0,_name, i);
-        route_train.push_back(i);
+        _departure_hour.push_back(__departure_hour);
+        _departure_minute.push_back(__departure_minute);
+        _arrival_hour.push_back(__arrival_hour);
+        _arrival_minute.push_back(__arrival_minute);
+        Train new_train(_name, classa);
+        Route new_route(Station start, Station finish, _departure_hour, _departure_minute, _arrival_hour, _arrival_minute, 0 ,_name, new_train); //kurwa nie wiem co odpierdala
+        route_train.push_back(new_route);
     }
     return  route_train;
 
