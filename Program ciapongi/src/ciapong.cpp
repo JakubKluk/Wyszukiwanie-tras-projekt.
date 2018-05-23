@@ -7,7 +7,7 @@
 //PROSTY PRZYKŁADOWY PROGRAM WYUSZKIWANIA W PLIKU STACJE.TXT,
 // WYKORZYTUJĄCY STWORZENIE KLASY, JEJ METODY I FUNKCJĘ find_station
 #include <fstream>                                  //biblioteka do obsługi plików
-/*
+
     Station find_station(std::string name_to_find){
     std::fstream plik_s;                            //nazwa którą będziemy się odwoływać do pliku
     plik_s.open("stacje.txt", std::ios::in);        //otwarcie pliku
@@ -63,7 +63,7 @@ int find_class(const std::string& name)
     std::cout<<"Nie ma takiego pociągu"<<std::endl;     //jeśli nie znajdziemy nazwy naszego pociągu, zamykamy plik i kończymy program
     exit(0);
 }
-
+/*
 Route find_tour(std:: string start, std::string  end)//przekazujemy nazwy miast(stacji) z której chcemy jechac i gdzie dojechac
 {
   auto number_start = find_station(start).getNumber();
@@ -164,7 +164,7 @@ void find_tour(Station start, Station finish){
     }
 
 }
-/*
+
 void check_train(std::string start, std::string end, int day, int time, int trainclass ) //stacja poczatkowa-koncowa, dzien, godzina i klasa ktore nas interesuja
 {
     Route _route;
@@ -203,4 +203,4 @@ void check_train(std::string start, std::string end, int day, int time, int trai
     std::cout<<" Nie ma takiego pociagu ktory spelnial by nasze oczekiwania "<<std::endl;
     return;
 }
-*/
+
