@@ -25,7 +25,6 @@ while(0) {
 while(1){
     Station start_st(2,"Lublin");
     Station finish_st(4,"Warszawa_centralna");
-
     find_tour(start_st,finish_st);
 
 }

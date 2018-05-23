@@ -120,7 +120,6 @@ void find_tour(Station start, Station finish){
     std::vector<std::string> train_name;
     std::string temp_train_name;
     int i=1,j=1,k=1;
-
     while(getline(plik_s,taken_line)){
 
         if(taken_line=="NAME" ){
@@ -131,14 +130,15 @@ void find_tour(Station start, Station finish){
         if(k==0) {
             do {
                 getline(plik_s, taken_line);
-            } while (taken_line == "STATION");
+            } while (taken_line != "STATION");
             getline(plik_s, taken_line);
             if (taken_line == start_station) {
                 while (i) {
 
                     do {
                         getline(plik_s, taken_line);
-                    } while (taken_line == "STATION" or taken_line == "END_STATION");
+                    } while ((taken_line != "STATION") and (taken_line != "END_STATION"));
+
                     if (taken_line == "END_STATION") {
                         j = i = 0;
                     } else {
@@ -158,9 +158,7 @@ void find_tour(Station start, Station finish){
                 k = 0;
             }
         }
-
     }
-
     for(auto e:train_name){
         std::cout<<e<<std::endl;
     }
