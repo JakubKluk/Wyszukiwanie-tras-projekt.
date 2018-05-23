@@ -34,6 +34,34 @@
     //PROSTY PRZYKŁADOWY PROGRAM WYUSZKIWANIA W PLIKU STACJE.TXT,
     // WYKORZYTUJĄCY STWORZENIE KLASY, JEJ METODY I FUNKCJĘ find_station
 
+   exit(0);
+}
+
+int find_class(const std::string& name)
+{
+    std::fstream file;                                  //nazwa służąca do odwoływania się do pliku
+    file.open("ciapongi.txt", std::ios::in);            //otwieramy plik
+        if(file.good()==false)
+    {
+        std::cout<<"Nie ma pliku"<<std::endl;
+                 exit(0);
+    }                                                   //sprawdzamy czy otwarcie przebiegło pomyślnie, jeśli nie, kończymy program
+    std::string line;
+    while(getline(file, line))                          //przeszukujemy każdą linijkę pliku aż do znalezienia naszej nazwy lub końca pliku
+    {
+        if(line==name)
+        {
+            getline(file, line);                        //Każdy getline przesuwa pobieranie tekstu o jedną linijkę w dół. Po znalezieniu nazwy jesteśmy na linijce "CLASS", więc musimy przesunąć się o linijkę niżej
+            getline(file, line);
+            int i;
+            i = std::stoi(line);                        //Konwersja std::string na int przy użyciu funkcji biblioteki standardowej
+            file.close();                               //zamknięcie pliku
+            return i;
+        }
+    }
+    file.close();
+    std::cout<<"Nie ma takiego pociągu"<<std::endl;     //jeśli nie znajdziemy nazwy naszego pociągu, zamykamy plik i kończymy program
+    exit(0);
 }
 
 Route find_tour(std:: string start, std::string  end)//przekazujemy nazwy miast(stacji) z której chcemy jechac i gdzie dojechac
@@ -75,6 +103,26 @@ Route find_tour(std:: string start, std::string  end)//przekazujemy nazwy miast(
 
 }
 
+void check_train(std::string start, std::string end, int day, int time, int trainclass ) //stacja poczatkowa-koncowa, dzien, godzina i klasa ktore nas interesuja
+{
+    Route _route=find_tour(start,end);                  // zwraca nam trase na wyszukiwanych stacjach
+    std::string _name=_route.get_name();                // zwraca nam nazwe pociagu na tej trasie
+    int _trainclass,_time,_day,_arrivetime;             // zmienne ktore beda porownywane do tych wpisanych na poczatku
+    _trainclass=find_class(_name);     // zwrocenie klasy poprzez funkcje
 
+    //tutaj bedzie sprawdzenie czy klasa pociagu zgadza sie z nasza
 
+    _day=*nazwafunkcjidooczytudnikursowania*(_name);    // zwrocenie dni kursowania poprzez funkcje
+
+    //tutaj bedzie sprawdzenie czy dni zgadzaja sie z naszym dniem
+
+    _time=_route.get_departure();                       // zwrocenie czasu odjazu pociagu
+    //tutaj bedzie sprawdzenie czy odjazd bedzie po godzinie ktora nas interesuje
+
+    _arrivetime=_route.get_arrival();                   //zwrocenie czasu przyjazdu do stacji docelowej
+
+    //jesli wszystko sie bedzie zgadzalo to wyswietli sie komunikat:
+    std::cout<<" Pociag z "<<start<<" do "<<end<<" w dniu "<<day<<" odjezdza o godz "<<_time<<" i na stacji docelowej bedzie o"<<_arrivetime<< std::endl;
+
+}
 
