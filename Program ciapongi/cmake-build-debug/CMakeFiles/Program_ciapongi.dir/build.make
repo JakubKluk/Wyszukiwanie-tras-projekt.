@@ -33,19 +33,19 @@ cmake_force:
 SHELL = cmd.exe
 
 # The CMake executable.
-CMAKE_COMMAND = "C:\Program Files\JetBrains\CLion 2018.1.2\bin\cmake\bin\cmake.exe"
+CMAKE_COMMAND = "D:\Clion\CLion 2018.1.2\bin\cmake\bin\cmake.exe"
 
 # The command to remove a file.
-RM = "C:\Program Files\JetBrains\CLion 2018.1.2\bin\cmake\bin\cmake.exe" -E remove -f
+RM = "D:\Clion\CLion 2018.1.2\bin\cmake\bin\cmake.exe" -E remove -f
 
 # Escaping for special characters.
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = "C:\Users\Kuba\Desktop\ciapongi\Program ciapongi"
+CMAKE_SOURCE_DIR = "C:\Users\Piotr Kosiba\Desktop\nowyinpg\Program ciapongi"
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = "C:\Users\Kuba\Desktop\ciapongi\Program ciapongi\cmake-build-debug"
+CMAKE_BINARY_DIR = "C:\Users\Piotr Kosiba\Desktop\nowyinpg\Program ciapongi\cmake-build-debug"
 
 # Include any dependencies generated for this target.
 include CMakeFiles/Program_ciapongi.dir/depend.make
@@ -59,16 +59,16 @@ include CMakeFiles/Program_ciapongi.dir/flags.make
 CMakeFiles/Program_ciapongi.dir/main.cpp.obj: CMakeFiles/Program_ciapongi.dir/flags.make
 CMakeFiles/Program_ciapongi.dir/main.cpp.obj: CMakeFiles/Program_ciapongi.dir/includes_CXX.rsp
 CMakeFiles/Program_ciapongi.dir/main.cpp.obj: ../main.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="C:\Users\Kuba\Desktop\ciapongi\Program ciapongi\cmake-build-debug\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/Program_ciapongi.dir/main.cpp.obj"
-	C:\MinGW\bin\g++.exe  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles\Program_ciapongi.dir\main.cpp.obj -c "C:\Users\Kuba\Desktop\ciapongi\Program ciapongi\main.cpp"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="C:\Users\Piotr Kosiba\Desktop\nowyinpg\Program ciapongi\cmake-build-debug\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/Program_ciapongi.dir/main.cpp.obj"
+	C:\PROGRA~2\MINGW-~1\I686-7~1.0-P\mingw32\bin\G__~1.EXE  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles\Program_ciapongi.dir\main.cpp.obj -c "C:\Users\Piotr Kosiba\Desktop\nowyinpg\Program ciapongi\main.cpp"
 
 CMakeFiles/Program_ciapongi.dir/main.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/Program_ciapongi.dir/main.cpp.i"
-	C:\MinGW\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "C:\Users\Kuba\Desktop\ciapongi\Program ciapongi\main.cpp" > CMakeFiles\Program_ciapongi.dir\main.cpp.i
+	C:\PROGRA~2\MINGW-~1\I686-7~1.0-P\mingw32\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "C:\Users\Piotr Kosiba\Desktop\nowyinpg\Program ciapongi\main.cpp" > CMakeFiles\Program_ciapongi.dir\main.cpp.i
 
 CMakeFiles/Program_ciapongi.dir/main.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Program_ciapongi.dir/main.cpp.s"
-	C:\MinGW\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "C:\Users\Kuba\Desktop\ciapongi\Program ciapongi\main.cpp" -o CMakeFiles\Program_ciapongi.dir\main.cpp.s
+	C:\PROGRA~2\MINGW-~1\I686-7~1.0-P\mingw32\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "C:\Users\Piotr Kosiba\Desktop\nowyinpg\Program ciapongi\main.cpp" -o CMakeFiles\Program_ciapongi.dir\main.cpp.s
 
 CMakeFiles/Program_ciapongi.dir/main.cpp.obj.requires:
 
@@ -84,16 +84,16 @@ CMakeFiles/Program_ciapongi.dir/main.cpp.obj.provides.build: CMakeFiles/Program_
 CMakeFiles/Program_ciapongi.dir/src/ciapong.cpp.obj: CMakeFiles/Program_ciapongi.dir/flags.make
 CMakeFiles/Program_ciapongi.dir/src/ciapong.cpp.obj: CMakeFiles/Program_ciapongi.dir/includes_CXX.rsp
 CMakeFiles/Program_ciapongi.dir/src/ciapong.cpp.obj: ../src/ciapong.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="C:\Users\Kuba\Desktop\ciapongi\Program ciapongi\cmake-build-debug\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/Program_ciapongi.dir/src/ciapong.cpp.obj"
-	C:\MinGW\bin\g++.exe  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles\Program_ciapongi.dir\src\ciapong.cpp.obj -c "C:\Users\Kuba\Desktop\ciapongi\Program ciapongi\src\ciapong.cpp"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="C:\Users\Piotr Kosiba\Desktop\nowyinpg\Program ciapongi\cmake-build-debug\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/Program_ciapongi.dir/src/ciapong.cpp.obj"
+	C:\PROGRA~2\MINGW-~1\I686-7~1.0-P\mingw32\bin\G__~1.EXE  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles\Program_ciapongi.dir\src\ciapong.cpp.obj -c "C:\Users\Piotr Kosiba\Desktop\nowyinpg\Program ciapongi\src\ciapong.cpp"
 
 CMakeFiles/Program_ciapongi.dir/src/ciapong.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/Program_ciapongi.dir/src/ciapong.cpp.i"
-	C:\MinGW\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "C:\Users\Kuba\Desktop\ciapongi\Program ciapongi\src\ciapong.cpp" > CMakeFiles\Program_ciapongi.dir\src\ciapong.cpp.i
+	C:\PROGRA~2\MINGW-~1\I686-7~1.0-P\mingw32\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "C:\Users\Piotr Kosiba\Desktop\nowyinpg\Program ciapongi\src\ciapong.cpp" > CMakeFiles\Program_ciapongi.dir\src\ciapong.cpp.i
 
 CMakeFiles/Program_ciapongi.dir/src/ciapong.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Program_ciapongi.dir/src/ciapong.cpp.s"
-	C:\MinGW\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "C:\Users\Kuba\Desktop\ciapongi\Program ciapongi\src\ciapong.cpp" -o CMakeFiles\Program_ciapongi.dir\src\ciapong.cpp.s
+	C:\PROGRA~2\MINGW-~1\I686-7~1.0-P\mingw32\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "C:\Users\Piotr Kosiba\Desktop\nowyinpg\Program ciapongi\src\ciapong.cpp" -o CMakeFiles\Program_ciapongi.dir\src\ciapong.cpp.s
 
 CMakeFiles/Program_ciapongi.dir/src/ciapong.cpp.obj.requires:
 
@@ -120,7 +120,7 @@ Program_ciapongi.exe: CMakeFiles/Program_ciapongi.dir/build.make
 Program_ciapongi.exe: CMakeFiles/Program_ciapongi.dir/linklibs.rsp
 Program_ciapongi.exe: CMakeFiles/Program_ciapongi.dir/objects1.rsp
 Program_ciapongi.exe: CMakeFiles/Program_ciapongi.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir="C:\Users\Kuba\Desktop\ciapongi\Program ciapongi\cmake-build-debug\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_3) "Linking CXX executable Program_ciapongi.exe"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir="C:\Users\Piotr Kosiba\Desktop\nowyinpg\Program ciapongi\cmake-build-debug\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_3) "Linking CXX executable Program_ciapongi.exe"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles\Program_ciapongi.dir\link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
@@ -138,6 +138,6 @@ CMakeFiles/Program_ciapongi.dir/clean:
 .PHONY : CMakeFiles/Program_ciapongi.dir/clean
 
 CMakeFiles/Program_ciapongi.dir/depend:
-	$(CMAKE_COMMAND) -E cmake_depends "MinGW Makefiles" "C:\Users\Kuba\Desktop\ciapongi\Program ciapongi" "C:\Users\Kuba\Desktop\ciapongi\Program ciapongi" "C:\Users\Kuba\Desktop\ciapongi\Program ciapongi\cmake-build-debug" "C:\Users\Kuba\Desktop\ciapongi\Program ciapongi\cmake-build-debug" "C:\Users\Kuba\Desktop\ciapongi\Program ciapongi\cmake-build-debug\CMakeFiles\Program_ciapongi.dir\DependInfo.cmake" --color=$(COLOR)
+	$(CMAKE_COMMAND) -E cmake_depends "MinGW Makefiles" "C:\Users\Piotr Kosiba\Desktop\nowyinpg\Program ciapongi" "C:\Users\Piotr Kosiba\Desktop\nowyinpg\Program ciapongi" "C:\Users\Piotr Kosiba\Desktop\nowyinpg\Program ciapongi\cmake-build-debug" "C:\Users\Piotr Kosiba\Desktop\nowyinpg\Program ciapongi\cmake-build-debug" "C:\Users\Piotr Kosiba\Desktop\nowyinpg\Program ciapongi\cmake-build-debug\CMakeFiles\Program_ciapongi.dir\DependInfo.cmake" --color=$(COLOR)
 .PHONY : CMakeFiles/Program_ciapongi.dir/depend
 

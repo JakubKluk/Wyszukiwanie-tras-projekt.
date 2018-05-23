@@ -63,47 +63,8 @@ int find_class(const std::string& name)
     std::cout<<"Nie ma takiego pociągu"<<std::endl;     //jeśli nie znajdziemy nazwy naszego pociągu, zamykamy plik i kończymy program
     exit(0);
 }
-/*
-Route find_tour(std:: string start, std::string  end)//przekazujemy nazwy miast(stacji) z której chcemy jechac i gdzie dojechac
-{
-  auto number_start = find_station(start).getNumber();
-  auto number_end = find_station(end).getNumber();
-                //zmieniam liczby na stringi
-  std::string station_first = std::to_string(number_start);
-  std::string station_end = std::to_string(number_end);
-  std::vector<std::string> good_trains;
-  std::string line;
-  std::fstream plik_s;
-  plik_s.open("pociagi.txt", std::ios::in);
-  if(plik_s.good()==false)
-  {
-      std::cout<<"Nie ma pliku"<<std::endl;
-      exit(0);
-  }
 
-    while(getline(plik_s),line)
-  {
-
-      if(line == station_first)
-      {
-          while(true)
-          {
-              if (line != 'END_STATION' and line == station_end) {
-
-                  {
-
-                  }
-              }
-          }
-      }
-
-
-  }
-
-
-}
-*/
-void find_tour(Station start, Station finish){
+std::vector<Route> find_tour(Station start, Station finish){
     std::string start_station=std::to_string(start.getNumber());    //konwertuje int na string z numerem stacji początkowej
     std::string finish_station=std::to_string(finish.getNumber());  //---//---
 
@@ -146,24 +107,90 @@ void find_tour(Station start, Station finish){
                         getline(plik_s, taken_line);
                         if (taken_line == finish_station) {
                             i = 0;
-
+                            train_name.push_back(temp_train_name);
+                            std::cout<<train_name[0];
                         }
                     }
                 }
-                if (j == 1) {
-                    train_name.push_back(temp_train_name);
-                }
+                /*if (j == 1) {                                   //Pojawia sie problem taki ze nazwa jest dublowana z niewadomego wzgledu dlatego jest ona umieszczonea wyzej
+                   / train_name.push_back(temp_train_name);
+                    std::cout<<temp_train_name<<std::endl;
+                    std::cout<<train_name[0]<<std::endl;
+                }*/
 
             } else {
                 k = 0;
             }
-        }
+        } getline(plik_s,taken_line);
     }
-    for(auto e:train_name){
-        std::cout<<e<<std::endl;
+    plik_s.close();
+    int classa;
+    std::vector<Route> route_train;
+    std::vector<int> _departure;
+    std::vector<int> _arrival;
+    std::string _name;
+    std::vector<Train> trains;
+    int __departure;
+    int __arrival;
+    plik_s.open("ciapongi.txt", std::ios::in);
+    if(plik_s.good()==false)
+    {
+        std::cout<<"Nie ma pliku"<<std::endl;
+        exit(0);
     }
+    std::string new_line; //odczytywana linijka tekstu
+    for(auto i=0; i<train_name.size(); i++)
+    {
+        std::string _name = train_name[i];
+        while(getline(plik_s,new_line))
+        {
+            if(new_line == train_name[i])
+            {
+                getline(plik_s,new_line);
+                if(new_line == "CLASS")
+                {
+                    getline(plik_s,new_line);
+                    classa = atoi(new_line.c_str());
+                    getline(plik_s,new_line);
+                    if(new_line == start_station)
+                    {
+                        getline(plik_s,new_line);  //troche pojebane ale chyba dziala, to wczytuje godziny
+                        getline(plik_s,new_line);
+                        getline(plik_s,new_line);
+                        getline(plik_s,new_line);
+                        getline(plik_s,new_line);
+                        std::string time_departure;
+                        time_departure = new_line;
+                        time_departure += ':';
+                        getline(plik_s,new_line);
+                        time_departure +=new_line;
+                        __departure = atoi(time_departure.c_str());
+                        getline(plik_s,new_line);
+                        if(new_line == finish_station)
+                        {
+                            getline(plik_s,new_line);
+                            std::string time_arrival;
+                            time_arrival = new_line;
+                            getline(plik_s,new_line);
+                            time_arrival += ':';
+                            time_arrival += new_line;
+                            __arrival = atoi(time_arrival.c_str());
+                        }
 
-}
+
+                    }
+
+
+                }
+            }
+        }
+        _departure.push_back(__departure);
+        _arrival.push_back(__arrival);
+        Train i(_name, classa);
+        Route i(Station start, Station finish, _departure, _arrival, 0,_name, i);
+        route_train.push_back(i);
+    }
+    return  route_train;
 
 void check_train(std::string start, std::string end, int day, int time, int trainclass ) //stacja poczatkowa-koncowa, dzien, godzina i klasa ktore nas interesuja
 {
