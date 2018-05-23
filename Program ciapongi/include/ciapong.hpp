@@ -47,7 +47,7 @@ private:
 };
 
 Station find_station(std::string name_to_find);
-
+/*
 class Route : public Train, public Station {
 public:
     Route(Station initial, Station Final, std::vector<int> departure, std::vector<int> arrival, float distance, std::string name, Train train) : _initial(initial), _final(Final), _departure(departure), _arrival(arrival), _distance(distance), _name(name), _train(Train) {}
@@ -67,7 +67,8 @@ private:
     std::string _name;
     Train _train;
 };
+ */
 
-Route find_tour(Station _start, Station _end);//funkcja wyszukuje danej trasy za pomoca informacji o stacji poczatkowej i koncowej
+void find_tour(Station _start, Station _end);//funkcja wyszukuje danej trasy za pomoca informacji o stacji poczatkowej i koncowej
 
 #endif //PROGRAM_CIAPONGI_CIAPONG_HPP

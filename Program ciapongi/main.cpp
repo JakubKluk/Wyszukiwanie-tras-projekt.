@@ -5,7 +5,7 @@
 int main() {
     //PROSTY PRZYKŁADOWY PROGRAM WYUSZKIWANIA W PLIKU STACJE.TXT,
     // WYKORZYTUJĄCY STWORZENIE KLASY, JEJ METODY I FUNKCJĘ find_station
-while(1) {
+while(0) {
     std::cout << "Podaj nazwe stacji aby znalezc ja w bazie: " << std::endl;
 
     std::string input_name_of_station;
@@ -21,6 +21,13 @@ while(1) {
                   "Numer stacji: " << sr_station.getNumber() << std::endl <<
                   "Nazwa stacjii: " << sr_station.getNameStation() << std::endl;
     }
+}
+while(1){
+    Station start_st(2,"Lublin");
+    Station finish_st(4,"Warszawa_centralna");
+
+    find_tour(start_st,finish_st);
+
 }
     return 0;
 

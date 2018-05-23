@@ -13,7 +13,7 @@ OUT
 11
 12
 STATION
-3
+4
 IN
 23
 12
