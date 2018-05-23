@@ -167,24 +167,40 @@ void find_tour(Station start, Station finish){
 /*
 void check_train(std::string start, std::string end, int day, int time, int trainclass ) //stacja poczatkowa-koncowa, dzien, godzina i klasa ktore nas interesuja
 {
-    Route _route=find_tour(start,end);                  // zwraca nam trase na wyszukiwanych stacjach
-    std::string _name=_route.get_name();                // zwraca nam nazwe pociagu na tej trasie
-    int _trainclass,_time,_day,_arrivetime;             // zmienne ktore beda porownywane do tych wpisanych na poczatku
-    _trainclass=find_class(_name);     // zwrocenie klasy poprzez funkcje
+    Route _route;
+    std::vector<Route> _routes = find_tour(start, end);                  // zwraca nam trasy na wyszukiwanych stacjach
+    for (auto _route:_routes) {
+        std::string _name = _route.get_name();                // zwraca nam nazwe pociagu na tej trasie
+        int _trainclass, _time, _day, _arrivetime;             // zmienne ktore beda porownywane do tych wpisanych na poczatku
+        _trainclass = find_class(_name);     // zwrocenie klasy poprzez funkcje
+        if (_trainclass == trainclass)         //tutaj bedzie sprawdzenie czy klasa pociagu zgadza sie z nasza
+        {
+            _day = *nazwafunkcjidooczytudnikursowania * (_name);    // zwrocenie dni kursowania poprzez funkcje
+            int j=0;
+            int i=1
+            while((j=0) or (i<1000000))             // sprawdza na ktorym miejscu jest nasz oczekiwany dzien podrozy
+            {   i=i*10
+                if((day%i)>=1)
+                    j++;
+            }
+            if ((_day%i)==(i/10))       //tutaj bedzie sprawdzenie czy dni zgadzaja sie z naszym dniem
+            {
+                _time = _route.get_departure();                       // zwrocenie czasu odjazu pociagu
+                if ((_time / 100) >= (time / 100))                        //tutaj bedzie sprawdzenie czy odjazd bedzie po godzinie ktora nas interesuje
+                {
 
-    //tutaj bedzie sprawdzenie czy klasa pociagu zgadza sie z nasza
 
-    _day=*nazwafunkcjidooczytudnikursowania*(_name);    // zwrocenie dni kursowania poprzez funkcje
+                    _arrivetime = _route.get_arrival();                   //zwrocenie czasu przyjazdu do stacji docelowej
 
-    //tutaj bedzie sprawdzenie czy dni zgadzaja sie z naszym dniem
+                    //jesli wszystko sie bedzie zgadzalo to wyswietli sie komunikat:
+                    std::cout << " Pociag z " << start << " do " << end << " w dniu " << day << " odjezdza o godz " << _time << " i na stacji docelowej bedzie o" << _arrivetime << std::endl;
+                    return;
+                }
+            }
 
-    _time=_route.get_departure();                       // zwrocenie czasu odjazu pociagu
-    //tutaj bedzie sprawdzenie czy odjazd bedzie po godzinie ktora nas interesuje
-
-    _arrivetime=_route.get_arrival();                   //zwrocenie czasu przyjazdu do stacji docelowej
-
-    //jesli wszystko sie bedzie zgadzalo to wyswietli sie komunikat:
-    std::cout<<" Pociag z "<<start<<" do "<<end<<" w dniu "<<day<<" odjezdza o godz "<<_time<<" i na stacji docelowej bedzie o"<<_arrivetime<< std::endl;
-
+        }
+    }
+    std::cout<<" Nie ma takiego pociagu ktory spelnial by nasze oczekiwania "<<std::endl;
+    return;
 }
 */
