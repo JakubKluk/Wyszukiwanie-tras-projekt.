@@ -73,5 +73,5 @@ private:
 
 
 std::vector<Route> find_tour(Station _start, Station _end);//funkcja wyszukuje danej trasy za pomoca informacji o stacji poczatkowej i koncowej
-
+int find_class(const std::string& name);
 #endif //PROGRAM_CIAPONGI_CIAPONG_HPP

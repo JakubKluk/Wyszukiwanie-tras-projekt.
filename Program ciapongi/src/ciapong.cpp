@@ -195,14 +195,14 @@ std::vector<Route> find_tour(Station start, Station finish){
         _arrival_hour.push_back(__arrival_hour);
         _arrival_minute.push_back(__arrival_minute);
         Train new_train(_name, classa);
-        Route new_route(Station start, Station finish, _departure_hour, _departure_minute, _arrival_hour, _arrival_minute, 0 ,_name, new_train); //kurwa nie wiem co odpierdala
-        route_train.push_back(new_route);
+      //  Route new_route(Station start, Station finish, _departure_hour, _departure_minute, _arrival_hour, _arrival_minute, 0 ,_name, new_train); //kurwa nie wiem co odpierdala
+       // route_train.push_back(new_route);
     }
     return  route_train;
 
 void check_train(std::string start, std::string end, int day, int time, int trainclass ) //stacja poczatkowa-koncowa, dzien, godzina i klasa ktore nas interesuja
 {
-    Route _route;
+   Route _route;
     std::vector<Route> _routes = find_tour(start, end);                  // zwraca nam trasy na wyszukiwanych stacjach
     for (auto _route:_routes) {
         std::string _name = _route.get_name();                // zwraca nam nazwe pociagu na tej trasie
@@ -212,9 +212,9 @@ void check_train(std::string start, std::string end, int day, int time, int trai
         {
             _day = *nazwafunkcjidooczytudnikursowania * (_name);    // zwrocenie dni kursowania poprzez funkcje
             int j=0;
-            int i=1
+            int i=1;
             while((j=0) or (i<1000000))             // sprawdza na ktorym miejscu jest nasz oczekiwany dzien podrozy
-            {   i=i*10
+            {   i=i*10;
                 if((day%i)>=1)
                     j++;
             }
@@ -236,6 +236,6 @@ void check_train(std::string start, std::string end, int day, int time, int trai
         }
     }
     std::cout<<" Nie ma takiego pociagu ktory spelnial by nasze oczekiwania "<<std::endl;
-    return;
+    return 0;
 }
 
