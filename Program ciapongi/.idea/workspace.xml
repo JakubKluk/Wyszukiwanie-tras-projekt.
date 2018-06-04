@@ -12,9 +12,15 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="10155337-fe0e-4515-8442-4dfe6ec782aa" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/main.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/main.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Program_ciapongi.dir/objects.a" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Program_ciapongi.dir/objects.a" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Progress/2" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Progress/3" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Progress/count.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/Program_ciapongi.exe" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/Program_ciapongi.exe" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/ciapongi.txt" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/ciapongi.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/stacje.txt" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/stacje.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/ciapong.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/src/ciapong.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/src/test.cpp" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/cmake-build-debug/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -36,11 +42,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="ciapong.cpp" pinned="false" current-in-tab="true">
+      <file leaf-file-name="ciapong.cpp" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/ciapong.cpp">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="204">
-              <caret line="189" column="45" selection-start-line="189" selection-start-column="45" selection-end-line="189" selection-end-column="45" />
+            <state relative-caret-position="39">
+              <caret line="212" column="80" lean-forward="true" selection-start-line="212" selection-start-column="80" selection-end-line="212" selection-end-column="80" />
             </state>
           </provider>
         </entry>
@@ -48,17 +54,17 @@
       <file leaf-file-name="test.cpp" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/test.cpp">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="561">
-              <caret line="48" column="54" lean-forward="true" selection-start-line="48" selection-start-column="54" selection-end-line="48" selection-end-column="54" />
+            <state relative-caret-position="-15">
+              <caret line="17" column="40" selection-start-line="17" selection-start-column="40" selection-end-line="17" selection-end-column="40" />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="ciapong.hpp" pinned="false" current-in-tab="false">
+      <file leaf-file-name="ciapong.hpp" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/include/ciapong.hpp">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1071">
-              <caret line="87" column="47" lean-forward="true" selection-start-line="87" selection-start-column="4" selection-end-line="87" selection-end-column="47" />
+            <state relative-caret-position="1207">
+              <caret line="80" column="37" lean-forward="true" selection-start-line="80" selection-start-column="37" selection-end-line="80" selection-end-column="37" />
               <folding>
                 <element signature="e#116#135#0" expanded="true" />
               </folding>
@@ -79,8 +85,8 @@
         <option value="$PROJECT_DIR$/CMakeLists.txt" />
         <option value="$PROJECT_DIR$/include/ciapong.hpp" />
         <option value="$PROJECT_DIR$/main.cpp" />
-        <option value="$PROJECT_DIR$/src/test.cpp" />
         <option value="$PROJECT_DIR$/src/ciapong.cpp" />
+        <option value="$PROJECT_DIR$/src/test.cpp" />
       </list>
     </option>
   </component>
@@ -193,22 +199,24 @@
       <workItem from="1528138565669" duration="251000" />
       <workItem from="1528138890952" duration="1004000" />
       <workItem from="1528143229292" duration="1835000" />
+      <workItem from="1528146181232" duration="2978000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="40889000" />
+    <option name="totallyTimeSpent" value="43867000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-7" y="-7" width="1550" height="838" extended-state="6" />
+    <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
+    <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.13216145" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.13169643" />
       <window_info anchor="bottom" id="TODO" order="6" />
-      <window_info anchor="bottom" id="Messages" order="7" sideWeight="0.46289062" visible="true" weight="0.3627586" />
+      <window_info anchor="bottom" id="Messages" order="7" sideWeight="0.45982143" weight="0.36138615" />
       <window_info anchor="bottom" id="CMake" order="7" sideWeight="0.609375" weight="0.32838285" />
-      <window_info active="true" anchor="bottom" id="Event Log" order="7" sideWeight="0.5371094" side_tool="true" visible="true" weight="0.3627586" />
+      <window_info anchor="bottom" id="Event Log" order="7" sideWeight="0.54910713" side_tool="true" visible="true" weight="0.36138615" />
       <window_info anchor="bottom" id="Version Control" order="7" sideWeight="0.49925596" weight="0.32838285" />
-      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.45610118" weight="0.32838285" />
+      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.45089287" weight="0.32838285" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info anchor="bottom" id="Terminal" order="7" sideWeight="0.49925596" weight="0.32838285" />
       <window_info id="Favorites" order="2" side_tool="true" />
@@ -510,27 +518,27 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/include/ciapong.hpp">
+    <entry file="file://$PROJECT_DIR$/src/ciapong.cpp">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1071">
-          <caret line="87" column="47" lean-forward="true" selection-start-line="87" selection-start-column="4" selection-end-line="87" selection-end-column="47" />
-          <folding>
-            <element signature="e#116#135#0" expanded="true" />
-          </folding>
+        <state relative-caret-position="39">
+          <caret line="212" column="80" lean-forward="true" selection-start-line="212" selection-start-column="80" selection-end-line="212" selection-end-column="80" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/test.cpp">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="561">
-          <caret line="48" column="54" lean-forward="true" selection-start-line="48" selection-start-column="54" selection-end-line="48" selection-end-column="54" />
+        <state relative-caret-position="-15">
+          <caret line="17" column="40" selection-start-line="17" selection-start-column="40" selection-end-line="17" selection-end-column="40" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/ciapong.cpp">
+    <entry file="file://$PROJECT_DIR$/include/ciapong.hpp">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="204">
-          <caret line="189" column="45" selection-start-line="189" selection-start-column="45" selection-end-line="189" selection-end-column="45" />
+        <state relative-caret-position="1207">
+          <caret line="80" column="37" lean-forward="true" selection-start-line="80" selection-start-column="37" selection-end-line="80" selection-end-column="37" />
+          <folding>
+            <element signature="e#116#135#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>

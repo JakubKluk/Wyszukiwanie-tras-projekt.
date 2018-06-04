@@ -203,60 +203,25 @@ std::vector<Route> filter_out_routes(Station start, Station end, int day, int ar
 {
     std::vector<Route> non_filtered_out=find_tour(start, end); //tworzy wektor który przechowuje nieprzefiltrowane trasy pociągów na zadanej trasie
     std::vector<Route> filtered_out;                            //tworzy wektor który przechowuje przefiltrowane trasy pociągów
-    int is_satisfy_conditions=0;                                //Weryfikacja spełnienia warunków
+    int is_satisfy_day,is_satisfy_hour,is_satisfy_class,j;                                //Weryfikacja spełnienia warunków
 
     for(int i=0;i<non_filtered_out.size();i++){
 
-        if(find_operating_day(non_filtered_out[i].get_train_name())==day){
-            is_satisfy_conditions=1;
+        is_satisfy_day= (non_filtered_out[i].get_train_days() == day) ? 1 : 0; //sprawdza czy zgadza się dzień
+
+        std::vector<int> arriv_min_temp=non_filtered_out[i].get_arrival_minute();
+        std::vector<int> arriv_hour_temp=non_filtered_out[i].get_arrival_hour();
+        std::vector<int> depar_min_temp=non_filtered_out[i].get_departure_minute();
+        std::vector<int> depar_hour_temp=non_filtered_out[i].get_departure_hour();
+
+        is_satisfy_hour= (depar_min_temp[0] <= departure_hour and depar_hour_temp[0] <= departure_minute) ? 1 : 0;      //sprawdza czy zgadza się godzina
+
+        is_satisfy_class= (non_filtered_out[i].get_train_class()==train_class) ? 1 : 0;      //sprawdza czy zgadza się klasa pociągu
+
+        if (is_satisfy_day and is_satisfy_hour and is_satisfy_class){
+            filtered_out[j]=non_filtered_out[i];
+            j++;
         }
-        else is_satisfy_conditions=0;
-
-
-
     }
-    if (is_satisfy_conditions==1){
-        return filtered_out;
-    }
-    else{
-        std::cout<<"Brak pociagu"<<std::endl;
-        exit(0);
-    }
+    return filtered_out;
 }
-/*std::vector<Route> filter_out_routes(Station start, Station end, std::string day, int arrival_minute,int arrival_hour,int departure_minute, int departure_hour, int train_class ) //stacja poczatkowa-koncowa, dzien, godziny i minuty przyjazdu oraz odjazdu i klasa pociągu
-{
-   Route _route;
-    std::vector<Route> _routes = find_tour(start, end);                  // zwraca nam trasy na wyszukiwanych stacjach
-    for (auto _route:_routes) {
-        std::string _name = _route.get_name();                // zwraca nam nazwe pociagu na tej trasie
-        int _trainclass, _time, _day, _arrivetime;             // zmienne ktore beda porownywane do tych wpisanych na poczatku
-        _trainclass = find_class(_name);     // zwrocenie klasy poprzez funkcje
-        if (_trainclass == trainclass)         //tutaj bedzie sprawdzenie czy klasa pociagu zgadza sie z nasza
-        {
-            _day = *nazwafunkcjidooczytudnikursowania * (_name);    // zwrocenie dni kursowania poprzez funkcje
-            int j=0;
-            int i=1;
-            while((j=0) or (i<1000000))             // sprawdza na ktorym miejscu jest nasz oczekiwany dzien podrozy
-            {   i=i*10;
-                if((day%i)>=1)
-                    j++;
-            }
-            if ((_day%i)==(i/10))       //tutaj bedzie sprawdzenie czy dni zgadzaja sie z naszym dniem
-            {
-                _time = _route.get_departure();                       // zwrocenie czasu odjazu pociagu
-                if ((_time / 100) >= (time / 100))                        //tutaj bedzie sprawdzenie czy odjazd bedzie po godzinie ktora nas interesuje
-                {
-
-
-                    _arrivetime = _route.get_arrival();                   //zwrocenie czasu przyjazdu do stacji docelowej
-
-                    //jesli wszystko sie bedzie zgadzalo to wyswietli sie komunikat:
-                    std::cout << " Pociag z " << start << " do " << end << " w dniu " << day << " odjezdza o godz " << _time << " i na stacji docelowej bedzie o" << _arrivetime << std::endl;
-                    return;
-                }
-            }
-
-        }
-    }
-    std::cout<<" Nie ma takiego pociagu ktory spelnial by nasze oczekiwania "<<std::endl;
-}*/
