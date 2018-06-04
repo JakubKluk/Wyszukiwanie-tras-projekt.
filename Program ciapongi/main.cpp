@@ -8,5 +8,9 @@ std::cout<< "       _____    __ __    ____  ____  _____   ______    _____    ___
          <<" __  / / /| | / ,<     / /_/ / /_/ /  / /  / __/ __  / / /| | / / / / __/   "<<std::endl
          <<"/ /_/ / ___ |/ /| |   / ____/ _, _/  / /__/ /___/ /_/ / ___ |/ /_/ / /___   "<<std::endl
          <<"\\____/_/  |_/_/ |_|  /_/   /_/ |_|  /____/_____/\\____/_/  |_/_____/_____/   "<<std::endl;
-         std::cout<<std::endl<<"PLANER PODROZY NR. 1 NA KSIEZYCU"<<std::endl;
+         std::cout<<std::endl<<std::endl<<"PLANER PODROZY NR. 1 NA KSIEZYCU"<<std::endl;
+         std::cout<<std::endl<<"---------------------------------------------------------------"<<std::endl;
+
+
+         return 0;
 }

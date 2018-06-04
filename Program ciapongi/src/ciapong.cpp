@@ -9,7 +9,7 @@ Station find_station(std::string name_to_find){
     plik_s.open("stacje.txt", std::ios::in);        //otwarcie pliku
     if(plik_s.good()==false)                          //sprawdza czy plik istnieje i zwraca true/false
     {
-        std::cout<<"Nie ma pliku"<<std::endl;
+        std::cout<<"Nie ma pliku (ERROR EXIT)"<<std::endl;
         exit(0);                           //wyjebuje z programu jak nie może otworzyć
     }
 
@@ -194,9 +194,33 @@ std::vector<Route> find_tour(Station start, Station finish){
     return  route_train;
 }
 
-int find_operating_day(std::string train_name){//Do uzupełnienia
-    int operating_day=0000000;
-    return operating_day;
+int find_operating_day(std::string train_name){
+    int operating_day;
+    std::fstream plik;
+    plik.open("ciapongi.txt", std::ios::in);
+    if(plik.good()==false)                          //sprawdza czy plik istnieje i zwraca true/false
+    {
+        std::cout<<"Nie ma pliku (ERROR EXIT)"<<std::endl;
+        exit(0);                           //wywala z programu jak nie może otworzyć
+    }
+    std::string line;
+    while(getline(plik,line)){
+        if(line==train_name){
+            while (getline(plik,line))
+            {
+                if(line=="DAY"){
+                    getline(plik,line);
+                    operating_day=atoi(line.c_str());
+                    plik.close();
+                    return operating_day;
+                }
+
+            }
+        }
+    }
+    std::cout<<"Brak pociagu, nie mozna znalezc dni kursowania(ERROR EXIT)";
+    plik.close();
+    exit(0);
 }
 
 std::vector<Route> filter_out_routes(Station start, Station end, int day, int arrival_minute,int arrival_hour,int departure_minute, int departure_hour, int train_class )
