@@ -4,17 +4,13 @@
 
 #include "ciapong.hpp"
 
-//PROSTY PRZYKŁADOWY PROGRAM WYUSZKIWANIA W PLIKU STACJE.TXT,
-// WYKORZYTUJĄCY STWORZENIE KLASY, JEJ METODY I FUNKCJĘ find_station
-#include <fstream>                                  //biblioteka do obsługi plików
-
-    Station find_station(std::string name_to_find){
+Station find_station(std::string name_to_find){
     std::fstream plik_s;                            //nazwa którą będziemy się odwoływać do pliku
     plik_s.open("stacje.txt", std::ios::in);        //otwarcie pliku
     if(plik_s.good()==false)                          //sprawdza czy plik istnieje i zwraca true/false
     {
         std::cout<<"Nie ma pliku"<<std::endl;
-                 exit(0);                           //wyjebuje z programu jak nie może otworzyć
+        exit(0);                           //wyjebuje z programu jak nie może otworzyć
     }
 
     std::string line;                               //odczytana linijka z pliku
@@ -31,10 +27,6 @@
     Station s(0,"");
     plik_s.close();
     return s;
-    //PROSTY PRZYKŁADOWY PROGRAM WYUSZKIWANIA W PLIKU STACJE.TXT,
-    // WYKORZYTUJĄCY STWORZENIE KLASY, JEJ METODY I FUNKCJĘ find_station
-
-   exit(0);
 }
 
 int find_class(const std::string& name)
@@ -199,8 +191,32 @@ std::vector<Route> find_tour(Station start, Station finish){
        // route_train.push_back(new_route);
     }
     return  route_train;
+}
 
-void check_train(std::string start, std::string end, int day, int time, int trainclass ) //stacja poczatkowa-koncowa, dzien, godzina i klasa ktore nas interesuja
+int find_operating_day(std::string train_name){//Do uzupełnienia
+    int operating_day=0000000;
+    return operating_day;
+}
+
+std::vector<Route> filter_out_routes(Station start, Station end, int day, int arrival_minute,int arrival_hour,int departure_minute, int departure_hour, int train_class )
+{
+    std::vector<Route> non_filtered_out=find_tour(start, end); //tworzy wektor który przechowuje nieprzefiltrowane trasy pociągów na zadanej trasie
+    std::vector<Route> filtered_out;                            //tworzy wektor który przechowuje przefiltrowane trasy pociągów
+    int is_satisfy_conditions=0;                                //Weryfikacja spełnienia warunków
+
+    for(int i=0;i<non_filtered_out.size();i++){
+
+        if(find_operating_day(non_filtered_out[i].get_train_name())==day){
+            is_satisfy_conditions=1;
+        }
+        else is_satisfy_conditions=0;
+
+        if(non_filtered_out[i].)
+
+
+    }
+}
+/*std::vector<Route> filter_out_routes(Station start, Station end, std::string day, int arrival_minute,int arrival_hour,int departure_minute, int departure_hour, int train_class ) //stacja poczatkowa-koncowa, dzien, godziny i minuty przyjazdu oraz odjazdu i klasa pociągu
 {
    Route _route;
     std::vector<Route> _routes = find_tour(start, end);                  // zwraca nam trasy na wyszukiwanych stacjach
@@ -236,5 +252,4 @@ void check_train(std::string start, std::string end, int day, int time, int trai
         }
     }
     std::cout<<" Nie ma takiego pociagu ktory spelnial by nasze oczekiwania "<<std::endl;
-}
-
+}*/
