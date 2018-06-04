@@ -35,16 +35,18 @@ int main() {
 //TEST find_tour - funkcja zwraca obiekt tour, do funkcji podajemy dwa obiekty stacje poczatkowa i koncowa
         std::cout << "Test funkcji find_tour\n" << std::endl;
         Station s1 = find_station("Lublin");
-        Station s2 = find_station("Kraków");
+        Station s2 = find_station("Krakow_Glowny");
         std::vector<Route> b = find_tour(s1, s2);
-        if (b[1].get_initial() == s1) //nie wiem czemu blad
+        if (b[1].get_begin_station_name() == "Lublin")
         {
             std::cout << "100% completed, test is passed!!!\n" << std::endl;
         } else {
             std::cout << "TEST is not passed\n" << std::endl;
         }
 
-//TEST check_train -
+//TEST check_train -...
+
+   break;//musi byc wyjscie inaczej nieskonczona petla
     }
 
 }

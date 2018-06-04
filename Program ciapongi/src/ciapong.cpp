@@ -62,10 +62,10 @@ std::vector<Route> find_tour(Station start, Station finish){
 
     std::fstream plik_s;                            //nazwa którą będziemy się odwoływać do pliku
     plik_s.open("ciapongi.txt", std::ios::in);        //otwarcie pliku
-    if(plik_s.good()==false)                          //sprawdza czy plik istnieje i zwraca true/false
+    if(!plik_s.good())                          //sprawdza czy plik istnieje i zwraca true/false
     {
         std::cout<<"Nie ma pliku"<<std::endl;
-        exit(0);                           //wyjebuje z programu jak nie może otworzyć
+        exit(0);                           //problem jak nie może otworzyć
     }
 
     std::string taken_line; //odczytana linijka z pliku
@@ -129,7 +129,7 @@ std::vector<Route> find_tour(Station start, Station finish){
     int __departure_minute;
     int __arrival_minute;
     plik_s.open("ciapongi.txt", std::ios::in);
-    if(plik_s.good()==false)
+    if(!plik_s.good())
     {
         std::cout<<"Nie ma pliku"<<std::endl;
         exit(0);
@@ -138,6 +138,7 @@ std::vector<Route> find_tour(Station start, Station finish){
     for(auto i=0; i<train_name.size(); i++)
     {
         std::string _name = train_name[i];
+        int days = find_operating_day(train_name[i]); //odczytuje dni w ktorych kursuje i zapisuje je w ciag liczb w postaci int
         while(getline(plik_s,new_line))
         {
             if(new_line == train_name[i])
@@ -150,7 +151,7 @@ std::vector<Route> find_tour(Station start, Station finish){
                     getline(plik_s,new_line);
                     if(new_line == start_station)
                     {
-                        getline(plik_s,new_line);  //troche pojebane ale chyba dziala, to wczytuje godziny
+                        getline(plik_s,new_line);  //chyba dziala, to wczytuje godziny
                         getline(plik_s,new_line);
                         getline(plik_s,new_line);
                         getline(plik_s,new_line);
@@ -186,9 +187,9 @@ std::vector<Route> find_tour(Station start, Station finish){
         _departure_minute.push_back(__departure_minute);
         _arrival_hour.push_back(__arrival_hour);
         _arrival_minute.push_back(__arrival_minute);
-        Train new_train(_name, classa);//<-POTRZEBNY 3 PARAMETR
-      //  Route new_route(Station start, Station finish, _departure_hour, _departure_minute, _arrival_hour, _arrival_minute, 0 ,_name, new_train); //kurwa nie wiem co odpierdala
-       // route_train.push_back(new_route);
+        Train new_train(_name, classa, days);
+        Route new_route(start.getNumber(), start.getNameStation() ,finish.getNumber(), finish.getNameStation(), _departure_hour,_departure_minute,_arrival_hour,_arrival_minute,0,train_name[i], find_class(train_name[i]),days);
+        route_train.push_back(new_route);
     }
     return  route_train;
 }
