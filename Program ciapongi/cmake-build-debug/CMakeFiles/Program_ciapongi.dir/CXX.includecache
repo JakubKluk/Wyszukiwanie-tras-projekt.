@@ -1,0 +1,34 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+../include/ciapong.hpp
+iostream
+-
+fstream
+-
+cstdlib
+-
+string
+-
+vector
+-
+
+C:/Users/Kuba/Desktop/ciapongi/Program ciapongi/main.cpp
+ciapong.hpp
+C:/Users/Kuba/Desktop/ciapongi/Program ciapongi/ciapong.hpp
+iostream
+-
+
+C:/Users/Kuba/Desktop/ciapongi/Program ciapongi/src/ciapong.cpp
+ciapong.hpp
+C:/Users/Kuba/Desktop/ciapongi/Program ciapongi/src/ciapong.hpp
+
+C:/Users/Kuba/Desktop/ciapongi/Program ciapongi/src/test.cpp
+ciapong.hpp
+C:/Users/Kuba/Desktop/ciapongi/Program ciapongi/src/ciapong.hpp
+

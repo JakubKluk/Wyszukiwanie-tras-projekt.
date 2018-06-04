@@ -186,7 +186,7 @@ std::vector<Route> find_tour(Station start, Station finish){
         _departure_minute.push_back(__departure_minute);
         _arrival_hour.push_back(__arrival_hour);
         _arrival_minute.push_back(__arrival_minute);
-        Train new_train(_name, classa);
+        Train new_train(_name, classa);//<-POTRZEBNY 3 PARAMETR
       //  Route new_route(Station start, Station finish, _departure_hour, _departure_minute, _arrival_hour, _arrival_minute, 0 ,_name, new_train); //kurwa nie wiem co odpierdala
        // route_train.push_back(new_route);
     }
@@ -211,9 +211,15 @@ std::vector<Route> filter_out_routes(Station start, Station end, int day, int ar
         }
         else is_satisfy_conditions=0;
 
-        if(non_filtered_out[i].)
 
 
+    }
+    if (is_satisfy_conditions==1){
+        return filtered_out;
+    }
+    else{
+        std::cout<<"Brak pociagu"<<std::endl;
+        exit(0);
     }
 }
 /*std::vector<Route> filter_out_routes(Station start, Station end, std::string day, int arrival_minute,int arrival_hour,int departure_minute, int departure_hour, int train_class ) //stacja poczatkowa-koncowa, dzien, godziny i minuty przyjazdu oraz odjazdu i klasa pociągu
