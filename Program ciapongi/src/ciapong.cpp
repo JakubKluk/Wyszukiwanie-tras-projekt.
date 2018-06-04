@@ -236,6 +236,5 @@ void check_train(std::string start, std::string end, int day, int time, int trai
         }
     }
     std::cout<<" Nie ma takiego pociagu ktory spelnial by nasze oczekiwania "<<std::endl;
-    return 0;
 }
 

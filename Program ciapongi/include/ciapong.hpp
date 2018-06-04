@@ -57,7 +57,7 @@ public:
     std::vector<int> get_arrival_hour() const {return _arrival_hour;}      //Zwraca godzinę przyjazdu.
     std::vector<int> get_arrival_minute() const {return _arrival_minute;}      //Zwraca godzinę przyjazdu.
     float get_distance() const {return _distance;}        //Zwraca odległość.
-    Train get_train() const {return Train(_train_name,_train_classa);}        //Zwraca obiekt klasy 'train' kursujący na tej trasie.
+    Train get_train() const {return Train(_train_name,_train_classa);}        //Zwraca obiekt klasy 'Train' kursujący na tej trasie.
 private:
     std::vector<int> _departure_hour;
     std::vector<int> _departure_minute;
