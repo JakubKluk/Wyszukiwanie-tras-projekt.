@@ -1,6 +1,7 @@
 file(REMOVE_RECURSE
   "CMakeFiles/Program_ciapongi.dir/main.cpp.obj"
   "CMakeFiles/Program_ciapongi.dir/src/ciapong.cpp.obj"
+  "CMakeFiles/Program_ciapongi.dir/src/test.cpp.obj"
   "Program_ciapongi.pdb"
   "Program_ciapongi.exe"
   "Program_ciapongi.exe.manifest"

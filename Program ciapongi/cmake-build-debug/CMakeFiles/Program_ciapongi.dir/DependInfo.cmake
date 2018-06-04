@@ -6,6 +6,7 @@ set(CMAKE_DEPENDS_LANGUAGES
 set(CMAKE_DEPENDS_CHECK_CXX
   "C:/Users/Kuba/Desktop/ciapongi/Program ciapongi/main.cpp" "C:/Users/Kuba/Desktop/ciapongi/Program ciapongi/cmake-build-debug/CMakeFiles/Program_ciapongi.dir/main.cpp.obj"
   "C:/Users/Kuba/Desktop/ciapongi/Program ciapongi/src/ciapong.cpp" "C:/Users/Kuba/Desktop/ciapongi/Program ciapongi/cmake-build-debug/CMakeFiles/Program_ciapongi.dir/src/ciapong.cpp.obj"
+  "C:/Users/Kuba/Desktop/ciapongi/Program ciapongi/src/test.cpp" "C:/Users/Kuba/Desktop/ciapongi/Program ciapongi/cmake-build-debug/CMakeFiles/Program_ciapongi.dir/src/test.cpp.obj"
   )
 set(CMAKE_CXX_COMPILER_ID "GNU")
 

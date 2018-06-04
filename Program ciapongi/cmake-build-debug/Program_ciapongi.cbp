@@ -91,6 +91,9 @@
 		<Unit filename="C:/Users/Kuba/Desktop/ciapongi/Program ciapongi/src/ciapong.cpp">
 			<Option target="Program_ciapongi"/>
 		</Unit>
+		<Unit filename="C:/Users/Kuba/Desktop/ciapongi/Program ciapongi/src/test.cpp">
+			<Option target="Program_ciapongi"/>
+		</Unit>
 		<Unit filename="C:/Users/Kuba/Desktop/ciapongi/Program ciapongi/CMakeLists.txt">
 			<Option virtualFolder="CMake Files\"/>
 		</Unit>

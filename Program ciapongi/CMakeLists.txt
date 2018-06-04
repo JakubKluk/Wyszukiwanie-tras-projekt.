@@ -9,4 +9,4 @@ include_directories(include)
 set(SOURCE_FILES
         src/ciapong.cpp)
 
-add_executable(Program_ciapongi main.cpp  src/ciapong.cpp include/ciapong.hpp)
+add_executable(Program_ciapongi main.cpp  src/ciapong.cpp include/ciapong.hpp src/test.cpp)
