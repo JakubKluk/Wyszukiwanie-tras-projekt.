@@ -4,8 +4,8 @@ set(CMAKE_DEPENDS_LANGUAGES
   )
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_CXX
-  "C:/Users/Piotr Kosiba/Desktop/nowyinpg/Program ciapongi/main.cpp" "C:/Users/Piotr Kosiba/Desktop/nowyinpg/Program ciapongi/cmake-build-debug/CMakeFiles/Program_ciapongi.dir/main.cpp.obj"
-  "C:/Users/Piotr Kosiba/Desktop/nowyinpg/Program ciapongi/src/ciapong.cpp" "C:/Users/Piotr Kosiba/Desktop/nowyinpg/Program ciapongi/cmake-build-debug/CMakeFiles/Program_ciapongi.dir/src/ciapong.cpp.obj"
+  "C:/Users/Kuba/Desktop/ciapongi/Program ciapongi/main.cpp" "C:/Users/Kuba/Desktop/ciapongi/Program ciapongi/cmake-build-debug/CMakeFiles/Program_ciapongi.dir/main.cpp.obj"
+  "C:/Users/Kuba/Desktop/ciapongi/Program ciapongi/src/ciapong.cpp" "C:/Users/Kuba/Desktop/ciapongi/Program ciapongi/cmake-build-debug/CMakeFiles/Program_ciapongi.dir/src/ciapong.cpp.obj"
   )
 set(CMAKE_CXX_COMPILER_ID "GNU")
 
