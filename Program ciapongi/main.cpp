@@ -56,7 +56,7 @@ std::cout<< "       _____    __ __    ____  ____  _____   ______    _____    ___
             std::cout << "Podaj godzine przyjazdu" << std::endl;
             int arrival_hour;
             int arrival_minute;
-            std::cout << "Podaj klasê poci¹gu" << std::endl;
+            std::cout << "Podaj klase pociagu" << std::endl;
             int clasa;
             std::cin >> clasa;
             std::cin >> arrival_hour;
@@ -74,7 +74,7 @@ std::cout<< "       _____    __ __    ____  ____  _____   ______    _____    ___
             std::cout << "Podaj nazwe pociagu" << std::endl;
             std::string name;
             std::cin >> name;
-            std::cout << find_class(name); << std::endl;
+            std::cout << find_class(name) << std::endl;
             std::cout << "" << std::endl;
         }
         if (wybor == 4)
@@ -82,7 +82,7 @@ std::cout<< "       _____    __ __    ____  ____  _____   ______    _____    ___
             std::cout << "Podaj nazwe pociagu" << std::endl;
             std::string name;
             std::cin >> name;
-            std::cout << find_operating_name(name); << std::endl;
+            std::cout << find_operating_day(name) << std::endl;
             std::cout << "" << std::endl;
         }
         if (wybor!=1 && wybor!=2 && wybor!=3 && wybor!=4 && wybor!=5)
