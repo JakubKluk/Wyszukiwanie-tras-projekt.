@@ -6,11 +6,11 @@
 
 //TESTY
 // testy beda wykonuwane w main z powodu nie działania Unitestów w Clionie(brak instalacji)
-/*
+
 int main() {
 
 
-
+/*
 //TEST find_station - funkcja wyszukuje stacje po imieniu i wzraca obiekt stacja
     while (true) {
         std::cout << "Test funkcji find_station\n" << std::endl;
@@ -44,10 +44,30 @@ int main() {
             std::cout << "TEST is not passed\n" << std::endl;
         }
 
-//TEST check_train -...
+//TEST filter_out_routes funkcja zwraca vector Routów
 
-   break;//musi byc wyjscie inaczej nieskonczona petla
+        auto a1 = find_station('Lublin');
+        auto a2 = find_station('Tarnow');
+        int days = 1111111;
+        //godziny u minuty wpise od razu do funckji
+        auto routes_filter = filter_out_routes(a1,a2,days,15,10,16,10,2);
+        if(routes_filter[0].get_begin_station_name() == 'Lublib')
+        {
+            std::cout<<'100% completed, test is passed!!!\n'<<std::endl;
+        } else{
+            std::cout<<'TEST is not passed\n'<<std::endl;
+        }
     }
+
+//TEST find_operating_day
+
+        auto b = find_operating_day('Janusz');
+        if(b==1111111)
+        {
+            std::cout<<'100% completed, test is passed!!!\n'<<std::endl;
+        }else{
+            std::cout<<'TEST is not passed\n'<<std::endl;
+        }
 
 }
  */
