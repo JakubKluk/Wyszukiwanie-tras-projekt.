@@ -40,3 +40,9 @@ Sosnowiec
 Torun
 21
 Bielsko-Biala
+22
+Rzeszow_Glowny
+23
+Kielce
+24
+Olsztyn_Glowny
