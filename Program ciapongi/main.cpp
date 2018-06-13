@@ -1,20 +1,25 @@
 #include "ciapong.hpp"
 #include <iostream>
-
+#include <winnt.h>
+#include <afxres.h>
 
 
 int main(){
+    HANDLE hConsole = GetStdHandle(STD_OUTPUT_HANDLE);
+    SetConsoleTextAttribute(hConsole, 4);
 std::cout<< "       _____    __ __    ____  ____  _____   ______    _____    ____  ______"<<std::endl
          <<"      / /   |  / //_/   / __ \\/ __ \\/__  /  / ____/   / /   |  / __ \\/ ____/"<<std::endl
          <<" __  / / /| | / ,<     / /_/ / /_/ /  / /  / __/ __  / / /| | / / / / __/   "<<std::endl
          <<"/ /_/ / ___ |/ /| |   / ____/ _, _/  / /__/ /___/ /_/ / ___ |/ /_/ / /___   "<<std::endl
          <<"\\____/_/  |_/_/ |_|  /_/   /_/ |_|  /____/_____/\\____/_/  |_/_____/_____/   "<<std::endl;
+SetConsoleTextAttribute(hConsole, 3);
          std::cout<<std::endl<<std::endl<<"PLANER PODROZY NR. 1 NA KSIEZYCU"<<std::endl;
          std::cout<<std::endl<<"---------------------------------------------------------------"<<std::endl;
 
     std::string menu_option = "0";
     while (menu_option!="5")
     {
+        SetConsoleTextAttribute(hConsole, 15);
         std::cout << "Co chcialbys wyszukac?" << std::endl;
         std::cout << "1 - Pociagi pomiedzy stacjami   --> podajac: stacje" << std::endl;//PRAWIE GOTOWE!
         std::cout << "2 - Dostepne relacje pociagow   --> podajac: stacje, oraz godziny przyjazdu/odjazdu" << std::endl;//BARDZO NIE GOTOWE!
@@ -32,12 +37,16 @@ std::cout<< "       _____    __ __    ____  ____  _____   ______    _____    ___
                     std::string stacja_poczatkowa;
                     std::cin >> stacja_poczatkowa;
                     if(is_number(stacja_poczatkowa)) {
+                        SetConsoleTextAttribute(hConsole, 6);
                         std::cout << "ERROR: Nie znaleziono stacji, lub jest blad w pisowni!" << std::endl;
+                        SetConsoleTextAttribute(hConsole, 15);
                         continue;
                     }
                     start_st = find_station(stacja_poczatkowa);
                     if (start_st.getNumber() == 0) {
+                        SetConsoleTextAttribute(hConsole, 6);
                         std::cout << "ERROR: Nie znaleziono stacji, lub jest blad w pisowni!" << std::endl;
+                        SetConsoleTextAttribute(hConsole, 15);
                     }
                 } while (start_st.getNumber() == 0);
 
@@ -46,19 +55,25 @@ std::cout<< "       _____    __ __    ____  ____  _____   ______    _____    ___
                     std::string stacja_koncowa;
                     std::cin >> stacja_koncowa;
                     if(is_number(stacja_koncowa)) {
+                        SetConsoleTextAttribute(hConsole, 6);
                         std::cout << "ERROR: Nie znaleziono stacji, lub jest blad w pisowni!" << std::endl;
+                        SetConsoleTextAttribute(hConsole, 15);
                         continue;
                     }
                     finish_st = find_station(stacja_koncowa);
                     if (finish_st.getNumber() == 0) {
+                        SetConsoleTextAttribute(hConsole, 6);
                         std::cout << "ERROR: Nie znaleziono stacji, lub jest blad w pisowni!" << std::endl;
+                        SetConsoleTextAttribute(hConsole, 15);
                     }
                 } while (finish_st.getNumber() == 0);
                 std::vector<Route> v;
                 v = find_tour(start_st, finish_st);
 
                 if(v[0].get_begin_station_number()==0){
+                    SetConsoleTextAttribute(hConsole, 6);
                     std::cout<<"ERROR: Nie ma pociagu na zadaniej trasie!"<<std::endl;
+                    SetConsoleTextAttribute(hConsole, 15);
                     continue;
                 }
                 int j=0;
@@ -67,12 +82,23 @@ std::cout<< "       _____    __ __    ____  ____  _____   ______    _____    ___
                     auto d_m = i.get_departure_minute();
                     auto a_h = i.get_arrival_hour();
                     auto a_m = i.get_arrival_minute();
-                    std::cout << "\nNazwa pociagu:" << i.get_train_name() << std::endl;
-                    std::cout << "Ze stacji " << start_st.getNameStation() << " odjezdza o godzinie: " << d_h[j] << ":"
-                              << d_m[j] << std::endl;
-                    std::cout << "Na stacje " << finish_st.getNameStation() << " przyjezdza o godzinie: "
-                              << a_h[a_h.size()-1] << ":" << a_m[a_m.size()-1] << std::endl;
-                    std::cout << "Kursuje w dniach: " << human_day_representation(i.get_train_days()) << std::endl;
+                    std::cout << "\nNazwa pociagu: " ;
+                    SetConsoleTextAttribute(hConsole, 9);
+                    std::cout<< i.get_train_name() << std::endl;
+                    SetConsoleTextAttribute(hConsole, 15);
+                    std::cout << "Ze stacji " << start_st.getNameStation() << " odjezdza o godzinie: " ;
+                    SetConsoleTextAttribute(hConsole, 2);
+                    std::cout<< d_h[j] << ":" << d_m[j] << std::endl;
+                    SetConsoleTextAttribute(hConsole, 15);
+                    std::cout << "Na stacje " << finish_st.getNameStation() << " przyjezdza o godzinie: ";
+                    SetConsoleTextAttribute(hConsole, 2);
+                    std::cout << a_h[a_h.size()-1] << ":" << a_m[a_m.size()-1] << std::endl;
+                    SetConsoleTextAttribute(hConsole, 15);
+
+                    std::cout << "Kursuje w dniach: " ;
+                    SetConsoleTextAttribute(hConsole, 5);
+                    std::cout<<human_day_representation(i.get_train_days()) << std::endl;
+                    SetConsoleTextAttribute(hConsole, 15);
                     j++;
                 }
                 std::cout << "" << std::endl;
@@ -115,16 +141,26 @@ std::cout<< "       _____    __ __    ____  ____  _____   ______    _____    ___
                     std::string name;
                     std::cin >> name;
                     if(is_number(name)) {
+                        SetConsoleTextAttribute(hConsole, 6);
                         std::cout << "ERROR: Nie znaleziono pociagu, lub jest blad w pisowni!" << std::endl;
+                        SetConsoleTextAttribute(hConsole, 15);
                         continue;
                     }
                     t=find_train(name);
                     if (t.getClass() == 0) {
+                        SetConsoleTextAttribute(hConsole, 6);
                         std::cout << "ERROR: Nie znaleziono pociagu, lub jest blad w pisowni!" << std::endl;
+                        SetConsoleTextAttribute(hConsole, 15);
                     }
                 } while (t.getClass() == 0);
-                std::cout << "\nPociag: " << t.getName() << std::endl;
-                std::cout << "Kursuje w klasie: " << human_class_representation(t.getClass()) << std::endl;
+                std::cout << "\nPociag: ";
+                SetConsoleTextAttribute(hConsole, 9);
+                std::cout<< t.getName() << std::endl;
+                SetConsoleTextAttribute(hConsole, 15);
+                std::cout << "Kursuje w klasie: ";
+                SetConsoleTextAttribute(hConsole, 4);
+                std::cout<< human_class_representation(t.getClass()) << std::endl;
+                SetConsoleTextAttribute(hConsole, 15);
                 std::cout << "" << std::endl;
             }
             if (menu_option == "4") {
@@ -134,22 +170,33 @@ std::cout<< "       _____    __ __    ____  ____  _____   ______    _____    ___
                     std::string name;
                     std::cin >> name;
                     if(is_number(name)) {
+                        SetConsoleTextAttribute(hConsole, 6);
                         std::cout << "ERROR: Nie znaleziono pociagu, lub jest blad w pisowni!" << std::endl;
+                        SetConsoleTextAttribute(hConsole, 15);
                         continue;
                     }
                     t=find_train(name);
-                    t=find_train(name);
                     if (t.getClass() == 0) {
+                        SetConsoleTextAttribute(hConsole, 6);
                         std::cout << "ERROR: Nie znaleziono pociagu, lub jest blad w pisowni!" << std::endl;
+                        SetConsoleTextAttribute(hConsole, 15);
                     }
                 } while (t.getClass() == 0);
-                std::cout << "\nPociag: " << t.getName() << std::endl;
-                std::cout << "Kursuje w dniach: " << human_day_representation(t.getDays()) << std::endl;
+                std::cout << "\nPociag: ";
+                SetConsoleTextAttribute(hConsole, 9);
+                std::cout<< t.getName() << std::endl;
+                SetConsoleTextAttribute(hConsole, 15);
+                std::cout << "Kursuje w dniach: ";
+                SetConsoleTextAttribute(hConsole, 5);
+                std::cout<< human_day_representation(t.getDays()) << std::endl;
+                SetConsoleTextAttribute(hConsole, 15);
                 std::cout << "" << std::endl;
             }
             if (menu_option != "1" and menu_option != "2" and menu_option != "3" and menu_option != "4" and
                 menu_option != "5" and menu_option != "help") {
+                SetConsoleTextAttribute(hConsole, 6);
                 std::cout << "\nNieprawidlowe dzialanie (opcje:1-5), potrzebujesz pomocy? Wpisz \"help\"" << std::endl;
+                SetConsoleTextAttribute(hConsole, 15);
             }else{ std::cout <<"Co chcialbys wyszukac? Opcje:1-5, Potrzebujesz pomocy? Wpisz \"help\""<<std::endl;}
 
             std::cin>>menu_option;

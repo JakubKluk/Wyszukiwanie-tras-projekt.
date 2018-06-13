@@ -27,6 +27,10 @@ ciapong.hpp
 C:/Users/Kuba/Desktop/ciapongi/Program ciapongi/ciapong.hpp
 iostream
 -
+winnt.h
+-
+afxres.h
+-
 
 C:/Users/Kuba/Desktop/ciapongi/Program ciapongi/src/ciapong.cpp
 ciapong.hpp

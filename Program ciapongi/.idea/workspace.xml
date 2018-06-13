@@ -13,7 +13,7 @@
   <component name="ChangeListManager">
     <list default="true" id="10155337-fe0e-4515-8442-4dfe6ec782aa" name="Default" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ciapong.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/src/ciapong.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/main.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/main.cpp" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/cmake-build-debug/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -26,19 +26,22 @@
   <component name="ExecutionTargetManager" SELECTED_TARGET="CMakeBuildProfile:Debug" />
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="main.cpp" pinned="false" current-in-tab="false">
+      <file leaf-file-name="main.cpp" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/main.cpp">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="916">
-              <caret line="63" column="24" selection-start-line="63" selection-start-column="24" selection-end-line="63" selection-end-column="24" />
+            <state relative-caret-position="129">
+              <caret line="160" column="51" selection-start-line="160" selection-start-column="51" selection-end-line="160" selection-end-column="51" />
+              <folding>
+                <element signature="e#0#22#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="ciapong.cpp" pinned="false" current-in-tab="true">
+      <file leaf-file-name="ciapong.cpp" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/ciapong.cpp">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="367">
+            <state relative-caret-position="2329">
               <caret line="137" column="13" selection-start-line="137" selection-start-column="13" selection-end-line="137" selection-end-column="13" />
             </state>
           </provider>
@@ -86,8 +89,8 @@
         <option value="$PROJECT_DIR$/CMakeLists.txt" />
         <option value="$PROJECT_DIR$/src/test.cpp" />
         <option value="$PROJECT_DIR$/include/ciapong.hpp" />
-        <option value="$PROJECT_DIR$/main.cpp" />
         <option value="$PROJECT_DIR$/src/ciapong.cpp" />
+        <option value="$PROJECT_DIR$/main.cpp" />
       </list>
     </option>
   </component>
@@ -213,11 +216,12 @@
       <workItem from="1528889220257" duration="1697000" />
       <workItem from="1528894383632" duration="9779000" />
       <workItem from="1528911192554" duration="5488000" />
+      <workItem from="1528917100380" duration="2629000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="88092000" />
+    <option name="totallyTimeSpent" value="90721000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -230,14 +234,15 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
+    <editor active="true" />
     <layout>
       <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.13095239" />
       <window_info anchor="bottom" id="TODO" order="6" sideWeight="0.4985119" weight="0.32838285" />
-      <window_info anchor="bottom" id="Messages" order="7" sideWeight="0.46800596" weight="0.44059405" />
+      <window_info anchor="bottom" id="Messages" order="7" sideWeight="0.45610118" weight="0.44059405" />
       <window_info anchor="bottom" id="CMake" order="7" sideWeight="0.60863096" weight="0.32838285" />
-      <window_info anchor="bottom" id="Event Log" order="7" sideWeight="0.41666666" side_tool="true" visible="true" weight="0.44059405" />
+      <window_info anchor="bottom" id="Event Log" order="7" sideWeight="0.42857143" side_tool="true" visible="true" weight="0.44059405" />
       <window_info anchor="bottom" id="Version Control" order="7" sideWeight="0.49925596" weight="0.32838285" />
-      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.5833333" weight="0.39933994" />
+      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.5714286" weight="0.39933994" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info anchor="bottom" id="Terminal" order="7" sideWeight="0.4985119" weight="0.32838285" />
       <window_info id="Favorites" order="2" side_tool="true" />
@@ -549,17 +554,20 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/main.cpp">
+    <entry file="file://$PROJECT_DIR$/src/ciapong.cpp">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="916">
-          <caret line="63" column="24" selection-start-line="63" selection-start-column="24" selection-end-line="63" selection-end-column="24" />
+        <state relative-caret-position="2329">
+          <caret line="137" column="13" selection-start-line="137" selection-start-column="13" selection-end-line="137" selection-end-column="13" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/ciapong.cpp">
+    <entry file="file://$PROJECT_DIR$/main.cpp">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="367">
-          <caret line="137" column="13" selection-start-line="137" selection-start-column="13" selection-end-line="137" selection-end-column="13" />
+        <state relative-caret-position="129">
+          <caret line="160" column="51" selection-start-line="160" selection-start-column="51" selection-end-line="160" selection-end-column="51" />
+          <folding>
+            <element signature="e#0#22#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
