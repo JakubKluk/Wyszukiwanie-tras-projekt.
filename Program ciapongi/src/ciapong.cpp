@@ -10,7 +10,7 @@ Station find_station(std::string name_to_find){
     plik_s.open("stacje.txt", std::ios::in);        //otwarcie pliku
     if(plik_s.good()==false)                          //sprawdza czy plik istnieje i zwraca true/false
     {
-        std::cout<<"Nie ma pliku! (ERROR EXIT)"<<std::endl;
+        std::cout<<"Nie ma pliku! (ERROR EXIT:find_station)"<<std::endl;
         exit(0);                           //wyjebuje z programu jak nie może otworzyć
     }
 
@@ -34,7 +34,7 @@ Train find_train(std::string name_to_find){
     plik_s.open("ciapongi.txt", std::ios::in);        //otwarcie pliku
     if(plik_s.good()==false)                          //sprawdza czy plik istnieje i zwraca true/false
     {
-        std::cout<<"Nie ma pliku! (ERROR EXIT)"<<std::endl;
+        std::cout<<"Nie ma pliku! (ERROR EXIT:find_train)"<<std::endl;
         exit(0);                           //wyjebuje z programu jak nie może otworzyć
     }
 
@@ -66,7 +66,7 @@ int find_class(const std::string& name)
     file.open("ciapongi.txt", std::ios::in);            //otwieramy plik
         if(file.good()==false)
     {
-        std::cout<<"Nie ma pliku! (ERROR EXIT)"<<std::endl;
+        std::cout<<"Nie ma pliku! (ERROR EXIT:find_class1)"<<std::endl;
                  exit(0);
     }                                                   //sprawdzamy czy otwarcie przebiegło pomyślnie, jeśli nie, kończymy program
     std::string line;
@@ -83,7 +83,7 @@ int find_class(const std::string& name)
         }
     }
     file.close();
-    std::cout<<"Nie ma takiego pociagu! (ERROR EXIT)"<<std::endl;     //jeśli nie znajdziemy nazwy naszego pociągu, zamykamy plik i kończymy program
+    std::cout<<"Nie ma takiego pociagu! (ERROR EXIT:find_class2)"<<std::endl;     //jeśli nie znajdziemy nazwy naszego pociągu, zamykamy plik i kończymy program
     exit(0);
 }
 
@@ -96,7 +96,7 @@ std::vector<Route> find_tour(Station start, Station finish){
     plik_s.open("ciapongi.txt", std::ios::in);        //otwarcie pliku
     if(!plik_s.good())                          //sprawdza czy plik istnieje i zwraca true/false
     {
-        std::cout<<"Nie ma pliku! (ERROR EXIT)"<<std::endl;
+        std::cout<<"Nie ma pliku! (ERROR EXIT:find_tour1)"<<std::endl;
         exit(0);                           //problem jak nie może otworzyć
     }
 
@@ -128,9 +128,18 @@ std::vector<Route> find_tour(Station start, Station finish){
             }
         }
     }
+    if(train_name.size()==0){
+        std::vector<Route> route_train;
+        std::vector<int> temp;
+        Route r_t(0,"",0,"",temp,temp,temp,temp,0,"",0,0000000);
+        route_train.push_back(r_t);
+
+        return route_train;
+    }
     plik_s.close();
 
     int classa;
+    int days;
     std::vector<Route> route_train;
     std::vector<int> _departure_hour;
     std::vector<int> _departure_minute;
@@ -142,68 +151,59 @@ std::vector<Route> find_tour(Station start, Station finish){
     int __arrival_hour;
     int __departure_minute;
     int __arrival_minute;
-    plik_s.open("ciapongi.txt", std::ios::in);
-    if(!plik_s.good())
-    {
-        std::cout<<"Nie ma pliku! (ERROR EXIT)"<<std::endl;
-        exit(0);
-    }
-    std::string new_line; //odczytywana linijka tekstu
+
     for(auto i=0; i<train_name.size(); i++)
     {
-        std::string _name = train_name[i];
-        int days = find_operating_day(train_name[i]); //odczytuje dni w ktorych kursuje i zapisuje je w ciag liczb w postaci int
-        while(getline(plik_s,new_line))
+        plik_s.open("ciapongi.txt", std::ios::in);
+        if(!plik_s.good())
         {
-            if(new_line == train_name[i])
-            {
-                getline(plik_s,new_line);
-                if(new_line == "CLASS")
-                {
-                    getline(plik_s,new_line);
-                    classa = atoi(new_line.c_str());
-                    getline(plik_s,new_line);
-                    if(new_line == start_station)
-                    {
-                        getline(plik_s,new_line);  //chyba dziala, to wczytuje godziny
-                        getline(plik_s,new_line);
-                        getline(plik_s,new_line);
-                        getline(plik_s,new_line);
-                        getline(plik_s,new_line);
-                        std::string time_departure_hour;
-                        time_departure_hour = new_line;
-                        __departure_hour = atoi(time_departure_hour.c_str());
-                        getline(plik_s,new_line);
-                        std::string time_departure_minute;
-                        time_departure_minute=new_line;
-                        __departure_minute = atoi(time_departure_minute.c_str());
-                        if(new_line == finish_station)
-                        {
-                            getline(plik_s,new_line);
-                            std::string time_arrival_hour;
-                            time_arrival_hour = new_line;
-                            __arrival_hour = atoi(time_arrival_hour.c_str());
-                            getline(plik_s,new_line);
-                            std::string time_arrival_minute;
-                            time_arrival_minute = new_line;
-                            __arrival_minute = atoi(time_arrival_minute.c_str());
-                            getline(plik_s,new_line);
-                        }
-
-
-                    }
-
-
-                }
-            }
+            std::cout<<"Nie ma pliku! (ERROR EXIT:find_tour2)"<<std::endl;
+            exit(0);
         }
-        _departure_hour.push_back(__departure_hour);
-        _departure_minute.push_back(__departure_minute);
-        _arrival_hour.push_back(__arrival_hour);
-        _arrival_minute.push_back(__arrival_minute);
+        std::string new_line; //odczytywana linijka tekstu
+        std::string _name = train_name[i];
+        days= find_operating_day(train_name[i]); //odczytuje dni w ktorych kursuje i zapisuje je w ciag liczb w postaci int
+        classa=find_class(train_name[i]);
+        int found_end_station=0;
+        while(getline(plik_s,new_line)) {
+            if(new_line == train_name[i]) {
+                while(new_line!="END_STATION"){
+                     getline(plik_s,new_line);
+                     if(new_line=="STATION") {
+                         getline(plik_s,new_line);
+                         if (new_line == start_station) {
+                             while(found_end_station==0) {
+                                 if(new_line==finish_station){found_end_station=1;}
+                                 getline(plik_s, new_line);
+                                 getline(plik_s, new_line);
+                                 __arrival_hour = atoi(new_line.c_str());
+                                 getline(plik_s, new_line);
+                                 __arrival_minute = atoi(new_line.c_str());
+                                 getline(plik_s, new_line);
+                                 getline(plik_s, new_line);
+                                 __departure_hour = atoi(new_line.c_str());
+                                 getline(plik_s, new_line);
+                                 __departure_minute = atoi(new_line.c_str());
+                                 getline(plik_s, new_line);
+                                 getline(plik_s, new_line);
+                                 _departure_hour.push_back(__departure_hour);
+                                 _departure_minute.push_back(__departure_minute);
+                                 _arrival_hour.push_back(__arrival_hour);
+                                 _arrival_minute.push_back(__arrival_minute);
+                                 std::cout<<_departure_hour[0]<<std::endl;
+                             }
+                         }
+                     }
+                     if(found_end_station==1){break;}
+                 }
+            }
+            if(found_end_station==1){break;}
+        }
+
         Train new_train(_name, classa, days);
         Route new_route(start.getNumber(), start.getNameStation() ,finish.getNumber(), finish.getNameStation(), _departure_hour,_departure_minute,_arrival_hour,_arrival_minute,0,train_name[i], find_class(train_name[i]),days);
         route_train.push_back(new_route);
+        plik_s.close();
     }
     return  route_train;
 }
@@ -214,7 +214,7 @@ int find_operating_day(std::string train_name){
     plik.open("ciapongi.txt", std::ios::in);
     if(plik.good()==false)                          //sprawdza czy plik istnieje i zwraca true/false
     {
-        std::cout<<"Nie ma pliku! (ERROR EXIT)"<<std::endl;
+        std::cout<<"Nie ma pliku! (ERROR EXIT:find_operating_day)"<<std::endl;
         exit(0);                           //wywala z programu jak nie może otworzyć
     }
     std::string line;

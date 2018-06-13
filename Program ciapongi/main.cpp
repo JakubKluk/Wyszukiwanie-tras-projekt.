@@ -57,18 +57,23 @@ std::cout<< "       _____    __ __    ____  ____  _____   ______    _____    ___
                 std::vector<Route> v;
                 v = find_tour(start_st, finish_st);
 
+                if(v[0].get_begin_station_number()==0){
+                    std::cout<<"ERROR: Nie ma pociagu na zadaniej trasie!"<<std::endl;
+                    continue;
+                }
+                int j=0;
                 for (auto i : v) {
                     auto d_h = i.get_departure_hour();
                     auto d_m = i.get_departure_minute();
                     auto a_h = i.get_arrival_hour();
                     auto a_m = i.get_arrival_minute();
-
                     std::cout << "\nNazwa pociagu:" << i.get_train_name() << std::endl;
-                    std::cout << "Ze stacji " << start_st.getNameStation() << " odjezdza o godzinie: " << d_h[0] << ":"
-                              << d_m[0] << std::endl;
+                    std::cout << "Ze stacji " << start_st.getNameStation() << " odjezdza o godzinie: " << d_h[j] << ":"
+                              << d_m[j] << std::endl;
                     std::cout << "Na stacje " << finish_st.getNameStation() << " przyjezdza o godzinie: "
-                              << a_h[a_h.size()] << ":" << a_m[a_m.size()] << std::endl;
+                              << a_h[a_h.size()-1] << ":" << a_m[a_m.size()-1] << std::endl;
                     std::cout << "Kursuje w dniach: " << human_day_representation(i.get_train_days()) << std::endl;
+                    j++;
                 }
                 std::cout << "" << std::endl;
             }

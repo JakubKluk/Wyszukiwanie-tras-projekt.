@@ -13,13 +13,8 @@
   <component name="ChangeListManager">
     <list default="true" id="10155337-fe0e-4515-8442-4dfe6ec782aa" name="Default" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Program_ciapongi.dir/CXX.includecache" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Program_ciapongi.dir/CXX.includecache" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Program_ciapongi.dir/main.cpp.obj" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Program_ciapongi.dir/main.cpp.obj" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Program_ciapongi.dir/objects.a" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Program_ciapongi.dir/objects.a" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Program_ciapongi.dir/src/ciapong.cpp.obj" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Program_ciapongi.dir/src/ciapong.cpp.obj" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Program_ciapongi.dir/src/test.cpp.obj" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Program_ciapongi.dir/src/test.cpp.obj" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/Program_ciapongi.exe" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/Program_ciapongi.exe" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/include/ciapong.hpp" beforeDir="false" afterPath="$PROJECT_DIR$/include/ciapong.hpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Program_ciapongi.dir/src/ciapong.cpp.obj" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/ciapongi.txt" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/ciapongi.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/main.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/main.cpp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/ciapong.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/src/ciapong.cpp" afterDir="false" />
     </list>
@@ -37,8 +32,8 @@
       <file leaf-file-name="main.cpp" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/main.cpp">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="445">
-              <caret line="134" column="39" selection-start-line="134" selection-start-column="39" selection-end-line="134" selection-end-column="39" />
+            <state relative-caret-position="49">
+              <caret line="63" column="24" selection-start-line="63" selection-start-column="24" selection-end-line="63" selection-end-column="24" />
             </state>
           </provider>
         </entry>
@@ -46,8 +41,8 @@
       <file leaf-file-name="ciapong.cpp" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/ciapong.cpp">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="146">
-              <caret line="296" selection-start-line="296" selection-end-line="296" selection-end-column="36" />
+            <state relative-caret-position="153">
+              <caret line="192" column="69" lean-forward="true" selection-start-line="192" selection-start-column="69" selection-end-line="192" selection-end-column="69" />
             </state>
           </provider>
         </entry>
@@ -64,7 +59,7 @@
       <file leaf-file-name="ciapong.hpp" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/include/ciapong.hpp">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="158">
+            <state relative-caret-position="1289">
               <caret line="109" selection-start-line="109" selection-end-line="109" />
               <folding>
                 <element signature="e#116#135#0" expanded="true" />
@@ -79,6 +74,8 @@
     <findStrings>
       <find>find</find>
       <find>atoi</find>
+      <find>start_s</find>
+      <find>start_station</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -91,8 +88,8 @@
         <option value="$PROJECT_DIR$/include/ciapong.h" />
         <option value="$PROJECT_DIR$/CMakeLists.txt" />
         <option value="$PROJECT_DIR$/src/test.cpp" />
-        <option value="$PROJECT_DIR$/src/ciapong.cpp" />
         <option value="$PROJECT_DIR$/include/ciapong.hpp" />
+        <option value="$PROJECT_DIR$/src/ciapong.cpp" />
         <option value="$PROJECT_DIR$/main.cpp" />
       </list>
     </option>
@@ -106,7 +103,7 @@
   <component name="NodePackageJsonFileManager">
     <packageJsonPaths />
   </component>
-  <component name="ProjectFrameBounds" extendedState="6">
+  <component name="ProjectFrameBounds" extendedState="7">
     <option name="x" value="710" />
     <option name="width" value="1220" />
     <option name="height" value="788" />
@@ -217,22 +214,33 @@
       <workItem from="1528882835827" duration="3832000" />
       <workItem from="1528886855546" duration="2017000" />
       <workItem from="1528889220257" duration="1697000" />
+      <workItem from="1528894383632" duration="9779000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="72825000" />
+    <option name="totallyTimeSpent" value="82604000" />
+  </component>
+  <component name="TodoView">
+    <todo-panel id="selected-file">
+      <is-autoscroll-to-source value="true" />
+    </todo-panel>
+    <todo-panel id="all">
+      <are-packages-shown value="true" />
+      <is-autoscroll-to-source value="true" />
+    </todo-panel>
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
     <layout>
       <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.13095239" />
-      <window_info anchor="bottom" id="TODO" order="6" />
-      <window_info anchor="bottom" id="Messages" order="7" sideWeight="0.5342262" weight="0.44059405" />
-      <window_info anchor="bottom" id="CMake" order="7" sideWeight="0.609375" weight="0.32838285" />
-      <window_info anchor="bottom" id="Event Log" order="7" sideWeight="0.3608631" side_tool="true" visible="true" weight="0.44059405" />
+      <window_info anchor="bottom" id="TODO" order="6" sideWeight="0.4985119" weight="0.32838285" />
+      <window_info anchor="bottom" id="Messages" order="7" sideWeight="0.49627978" weight="0.44059405" />
+      <window_info anchor="bottom" id="CMake" order="7" sideWeight="0.60863096" weight="0.32838285" />
+      <window_info anchor="bottom" id="Event Log" order="7" sideWeight="0.4002976" side_tool="true" visible="true" weight="0.39933994" />
+      <window_info anchor="bottom" id="Find" order="1" />
       <window_info anchor="bottom" id="Version Control" order="7" sideWeight="0.49925596" weight="0.32838285" />
-      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.6391369" weight="0.39933994" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" sideWeight="0.59970236" visible="true" weight="0.39933994" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info anchor="bottom" id="Terminal" order="7" sideWeight="0.4985119" weight="0.32838285" />
       <window_info id="Favorites" order="2" side_tool="true" />
@@ -243,7 +251,6 @@
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
-      <window_info anchor="bottom" id="Find" order="1" />
     </layout>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -536,7 +543,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/include/ciapong.hpp">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="158">
+        <state relative-caret-position="1289">
           <caret line="109" selection-start-line="109" selection-end-line="109" />
           <folding>
             <element signature="e#116#135#0" expanded="true" />
@@ -546,15 +553,15 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/ciapong.cpp">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="146">
-          <caret line="296" selection-start-line="296" selection-end-line="296" selection-end-column="36" />
+        <state relative-caret-position="153">
+          <caret line="192" column="69" lean-forward="true" selection-start-line="192" selection-start-column="69" selection-end-line="192" selection-end-column="69" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/main.cpp">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="445">
-          <caret line="134" column="39" selection-start-line="134" selection-start-column="39" selection-end-line="134" selection-end-column="39" />
+        <state relative-caret-position="49">
+          <caret line="63" column="24" selection-start-line="63" selection-start-column="24" selection-end-line="63" selection-end-column="24" />
         </state>
       </provider>
     </entry>
