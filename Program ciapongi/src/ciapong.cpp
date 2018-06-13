@@ -114,14 +114,29 @@ std::vector<Route> find_tour(Station start, Station finish){
         }
         while(is_route==1)
         {
-            while(end_found!=1 and is_route==1) {
-                if (taken_line == "END_STATION") { is_route = 0; }
-                while (!(taken_line != "STATION" xor taken_line!="END_STATION")) { getline(plik_s, taken_line); }
-                if(taken_line=="STATION"){getline(plik_s,taken_line);}
-                if(taken_line==start_station){ start_found=1; }
-                if(taken_line == finish_station and start_found==1){ end_found=1; }
+            while(getline(plik_s,taken_line)) {
+                if(taken_line=="END_STATION") {
+                    is_route = 0;
+                    start_found=0;
+                    end_found=0;
+                    break;
+                }
+                if(taken_line=="STATION") {
+                    getline(plik_s, taken_line);
+                    if (taken_line == start_station or start_found) {
+                        start_found = 1;
+                        {
+                            if ((taken_line == finish_station)) {
+                                end_found = 1;
+                                while (taken_line != "END_STATION") { getline(plik_s, taken_line); }
+                                is_route = 0;
+                                break;
+                            }
+                        }
+                    }
+                }
             }
-            if(start_found==1 and end_found==1) {
+            if((start_found==1) and (end_found==1) and (is_route==0)) {
                 train_name.push_back(temp_train_name);
                 start_found=0;
                 end_found=0;
@@ -190,7 +205,6 @@ std::vector<Route> find_tour(Station start, Station finish){
                                  _departure_minute.push_back(__departure_minute);
                                  _arrival_hour.push_back(__arrival_hour);
                                  _arrival_minute.push_back(__arrival_minute);
-                                 std::cout<<_departure_hour[0]<<std::endl;
                              }
                          }
                      }
