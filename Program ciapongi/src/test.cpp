@@ -7,7 +7,7 @@
 //TESTY
 // testy beda wykonuwane w main z powodu nie działania Unitestów w Clionie(brak instalacji)
 
-int main() {
+//int main() {
 
 
 /*

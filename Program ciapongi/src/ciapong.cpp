@@ -9,7 +9,7 @@ Station find_station(std::string name_to_find){
     plik_s.open("stacje.txt", std::ios::in);        //otwarcie pliku
     if(plik_s.good()==false)                          //sprawdza czy plik istnieje i zwraca true/false
     {
-        std::cout<<"Nie ma pliku (ERROR EXIT)"<<std::endl;
+        std::cout<<"Nie ma pliku! (ERROR EXIT)"<<std::endl;
         exit(0);                           //wyjebuje z programu jak nie może otworzyć
     }
 
@@ -35,7 +35,7 @@ int find_class(const std::string& name)
     file.open("ciapongi.txt", std::ios::in);            //otwieramy plik
         if(file.good()==false)
     {
-        std::cout<<"Nie ma pliku"<<std::endl;
+        std::cout<<"Nie ma pliku! (ERROR EXIT)"<<std::endl;
                  exit(0);
     }                                                   //sprawdzamy czy otwarcie przebiegło pomyślnie, jeśli nie, kończymy program
     std::string line;
@@ -52,9 +52,10 @@ int find_class(const std::string& name)
         }
     }
     file.close();
-    std::cout<<"Nie ma takiego pociągu"<<std::endl;     //jeśli nie znajdziemy nazwy naszego pociągu, zamykamy plik i kończymy program
+    std::cout<<"Nie ma takiego pociagu! (ERROR EXIT)"<<std::endl;     //jeśli nie znajdziemy nazwy naszego pociągu, zamykamy plik i kończymy program
     exit(0);
 }
+
 
 std::vector<Route> find_tour(Station start, Station finish){
     std::string start_station=std::to_string(start.getNumber());    //konwertuje int na string z numerem stacji początkowej
@@ -64,7 +65,7 @@ std::vector<Route> find_tour(Station start, Station finish){
     plik_s.open("ciapongi.txt", std::ios::in);        //otwarcie pliku
     if(!plik_s.good())                          //sprawdza czy plik istnieje i zwraca true/false
     {
-        std::cout<<"Nie ma pliku"<<std::endl;
+        std::cout<<"Nie ma pliku! (ERROR EXIT)"<<std::endl;
         exit(0);                           //problem jak nie może otworzyć
     }
 
@@ -72,50 +73,32 @@ std::vector<Route> find_tour(Station start, Station finish){
 
     std::vector<std::string> train_name;
     std::string temp_train_name;
-    int i=1,j=1,k=1;
-    while(getline(plik_s,taken_line)){
+    int start_found=0,end_found=0,is_route=0;
 
+    while(getline(plik_s,taken_line)){
         if(taken_line=="NAME" ){
             getline(plik_s,taken_line);
             temp_train_name=taken_line;
-            k=0;
+            is_route=1;
         }
-        if(k==0) {
-            do {
-                getline(plik_s, taken_line);
-            } while (taken_line != "STATION");
-            getline(plik_s, taken_line);
-            if (taken_line == start_station) {
-                while (i) {
-
-                    do {
-                        getline(plik_s, taken_line);
-                    } while ((taken_line != "STATION") and (taken_line != "END_STATION"));
-
-                    if (taken_line == "END_STATION") {
-                        j = i = 0;
-                    } else {
-
-                        getline(plik_s, taken_line);
-                        if (taken_line == finish_station) {
-                            i = 0;
-                            train_name.push_back(temp_train_name);
-                            std::cout<<train_name[0];
-                        }
-                    }
-                }
-                /*if (j == 1) {                                   //Pojawia sie problem taki ze nazwa jest dublowana z niewadomego wzgledu dlatego jest ona umieszczonea wyzej
-                   / train_name.push_back(temp_train_name);
-                    std::cout<<temp_train_name<<std::endl;
-                    std::cout<<train_name[0]<<std::endl;
-                }*/
-
-            } else {
-                k = 0;
+        while(is_route==1)
+        {
+            while(end_found!=1 and is_route==1) {
+                if (taken_line == "END_STATION") { is_route = 0; }
+                while (!(taken_line != "STATION" xor taken_line!="END_STATION")) { getline(plik_s, taken_line); }
+                if(taken_line=="STATION"){getline(plik_s,taken_line);}
+                if(taken_line==start_station){ start_found=1; }
+                if(taken_line == finish_station and start_found==1){ end_found=1; }
             }
-        } getline(plik_s,taken_line);
+            if(start_found==1 and end_found==1) {
+                train_name.push_back(temp_train_name);
+                start_found=0;
+                end_found=0;
+            }
+        }
     }
     plik_s.close();
+
     int classa;
     std::vector<Route> route_train;
     std::vector<int> _departure_hour;
@@ -131,7 +114,7 @@ std::vector<Route> find_tour(Station start, Station finish){
     plik_s.open("ciapongi.txt", std::ios::in);
     if(!plik_s.good())
     {
-        std::cout<<"Nie ma pliku"<<std::endl;
+        std::cout<<"Nie ma pliku! (ERROR EXIT)"<<std::endl;
         exit(0);
     }
     std::string new_line; //odczytywana linijka tekstu
@@ -200,7 +183,7 @@ int find_operating_day(std::string train_name){
     plik.open("ciapongi.txt", std::ios::in);
     if(plik.good()==false)                          //sprawdza czy plik istnieje i zwraca true/false
     {
-        std::cout<<"Nie ma pliku (ERROR EXIT)"<<std::endl;
+        std::cout<<"Nie ma pliku! (ERROR EXIT)"<<std::endl;
         exit(0);                           //wywala z programu jak nie może otworzyć
     }
     std::string line;
@@ -218,7 +201,7 @@ int find_operating_day(std::string train_name){
             }
         }
     }
-    std::cout<<"Brak pociagu, nie mozna znalezc dni kursowania(ERROR EXIT)";
+    std::cout<<"Brak pociagu, nie mozna znalezc dni kursowania! (ERROR EXIT)";
     plik.close();
     exit(0);
 }
@@ -248,4 +231,34 @@ std::vector<Route> filter_out_routes(Station start, Station end, int day, int ar
         }
     }
     return filtered_out;
+}
+
+std::string human_day_representation(int course_days ){
+    std::ostringstream oss,iss;
+    iss<<course_days;
+    std::string temp_str=iss.str();
+    std::vector<char> s_str(temp_str.begin(), temp_str.end());
+
+    if(s_str[0]=='1'){ oss << "pon/";}
+    if(s_str[1]=='1'){ oss<<"wt/";}
+    if(s_str[2]=='1'){ oss<<"sr/";}
+    if(s_str[3]=='1'){ oss<<"czw/";}
+    if(s_str[4]=='1'){ oss<<"pt/";}
+    if(s_str[5]=='1'){ oss<<"sob/";}
+    if(s_str[6]=='1'){ oss<<"nd"; }
+
+    return oss.str();
+}
+
+std::string human_class_representation(int class_of_the_train){
+    switch (class_of_the_train){
+        case 1:
+            return "TLK (Twoje Linie Kolejowe)";
+        case 2:
+            return "IC (Intercity)";
+        case 3:
+            return "EIC (Express Intercity)";
+        case 4:
+            return "EIP (Express Intercity Premium)";
+    }
 }

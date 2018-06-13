@@ -10,6 +10,7 @@
 #include <cstdlib>
 #include <string>
 #include <vector>
+#include <sstream>
 
 class Train
 {
@@ -89,5 +90,15 @@ int find_operating_day(std::string train_name);
 /* Funkcja otrzymuje: nazwę pociągu
  * Działanie: funkcja wyszukuje w pliku dni w jakich pociąg kursuje
  * Funkcja zwraca: dni w jakie pociąg kursuje w formie "0000011" typu int */
+
+std::string human_day_representation(int course_days );
+/* Funkcja otrzymuje: dni kursowania w formie "1111100"
+ * Działanie: funkcja konwertuje liczby na reprezentację tekstową zrozumiałą dla człowieka
+ * Funkcja zwraca: dni w jakie pociąg kursuje w formie napisu typu string */
+
+std::string human_class_representation(int class_of_the_train);
+/* Funkcja otrzymuje: klasę pociągu w formie liczby
+ * Działanie: funkcja konwertuje liczby na reprezentację tekstową zrozumiałą dla człowieka
+ * Funkcja zwraca: klasę pociągu w formie napisu typu string */
 
 #endif //PROGRAM_CIAPONGI_CIAPONG_HPP
