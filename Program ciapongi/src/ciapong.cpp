@@ -2,6 +2,7 @@
 // Created by Kuba on 16.05.2018.
 //
 
+
 #include "ciapong.hpp"
 
 Station find_station(std::string name_to_find){
@@ -291,4 +292,10 @@ std::string human_class_representation(int class_of_the_train){
         case 4:
             return "EIP (Express Intercity Premium)";
     }
+}
+
+bool is_number(const std::string& s)
+{
+    return !s.empty() && std::find_if(s.begin(),
+                                      s.end(), [](char c) { return !std::isdigit(c); }) == s.end();
 }

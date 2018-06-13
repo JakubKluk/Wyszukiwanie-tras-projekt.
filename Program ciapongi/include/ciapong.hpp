@@ -11,6 +11,7 @@
 #include <string>
 #include <vector>
 #include <sstream>
+#include <algorithm>
 
 class Train
 {
@@ -105,5 +106,7 @@ std::string human_class_representation(int class_of_the_train);
 /* Funkcja otrzymuje: klasę pociągu w formie liczby
  * Działanie: funkcja konwertuje liczby na reprezentację tekstową zrozumiałą dla człowieka
  * Funkcja zwraca: klasę pociągu w formie napisu typu string */
+
+bool is_number(const std::string& s);
 
 #endif //PROGRAM_CIAPONGI_CIAPONG_HPP

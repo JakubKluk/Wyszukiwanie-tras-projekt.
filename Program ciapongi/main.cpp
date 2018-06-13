@@ -31,6 +31,10 @@ std::cout<< "       _____    __ __    ____  ____  _____   ______    _____    ___
                     std::cout << "\nPodaj nazwe stacji poczatkowej:" << std::endl;
                     std::string stacja_poczatkowa;
                     std::cin >> stacja_poczatkowa;
+                    if(is_number(stacja_poczatkowa)) {
+                        std::cout << "ERROR: Nie znaleziono stacji, lub jest blad w pisowni!" << std::endl;
+                        continue;
+                    }
                     start_st = find_station(stacja_poczatkowa);
                     if (start_st.getNumber() == 0) {
                         std::cout << "ERROR: Nie znaleziono stacji, lub jest blad w pisowni!" << std::endl;
@@ -41,6 +45,10 @@ std::cout<< "       _____    __ __    ____  ____  _____   ______    _____    ___
                     std::cout << "\nPodaj nazwe stacji koncowej:" << std::endl;
                     std::string stacja_koncowa;
                     std::cin >> stacja_koncowa;
+                    if(is_number(stacja_koncowa)) {
+                        std::cout << "ERROR: Nie znaleziono stacji, lub jest blad w pisowni!" << std::endl;
+                        continue;
+                    }
                     finish_st = find_station(stacja_koncowa);
                     if (finish_st.getNumber() == 0) {
                         std::cout << "ERROR: Nie znaleziono stacji, lub jest blad w pisowni!" << std::endl;
@@ -101,6 +109,10 @@ std::cout<< "       _____    __ __    ____  ____  _____   ______    _____    ___
                     std::cout << "\nPodaj nazwe pociagu:" << std::endl;
                     std::string name;
                     std::cin >> name;
+                    if(is_number(name)) {
+                        std::cout << "ERROR: Nie znaleziono pociagu, lub jest blad w pisowni!" << std::endl;
+                        continue;
+                    }
                     t=find_train(name);
                     if (t.getClass() == 0) {
                         std::cout << "ERROR: Nie znaleziono pociagu, lub jest blad w pisowni!" << std::endl;
@@ -116,6 +128,11 @@ std::cout<< "       _____    __ __    ____  ____  _____   ______    _____    ___
                     std::cout << "\nPodaj nazwe pociagu:" << std::endl;
                     std::string name;
                     std::cin >> name;
+                    if(is_number(name)) {
+                        std::cout << "ERROR: Nie znaleziono pociagu, lub jest blad w pisowni!" << std::endl;
+                        continue;
+                    }
+                    t=find_train(name);
                     t=find_train(name);
                     if (t.getClass() == 0) {
                         std::cout << "ERROR: Nie znaleziono pociagu, lub jest blad w pisowni!" << std::endl;
