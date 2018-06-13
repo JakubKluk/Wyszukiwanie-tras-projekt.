@@ -96,19 +96,33 @@ std::cout<< "       _____    __ __    ____  ____  _____   ______    _____    ___
                 std::cout << "" << std::endl;
             }
             if (menu_option == "3") {
-                std::cout << "\nPodaj nazwe pociagu:" << std::endl;
-                std::string name;
-                std::cin >> name;
-                std::cout << "\nPociag: " << name << std::endl;
-                std::cout << "Kursuje w klasie: " << human_class_representation(find_class(name)) << std::endl;
+                Train t("",0,0000000);
+                do {
+                    std::cout << "\nPodaj nazwe pociagu:" << std::endl;
+                    std::string name;
+                    std::cin >> name;
+                    t=find_train(name);
+                    if (t.getClass() == 0) {
+                        std::cout << "ERROR: Nie znaleziono pociagu, lub jest blad w pisowni!" << std::endl;
+                    }
+                } while (t.getClass() == 0);
+                std::cout << "\nPociag: " << t.getName() << std::endl;
+                std::cout << "Kursuje w klasie: " << human_class_representation(t.getClass()) << std::endl;
                 std::cout << "" << std::endl;
             }
             if (menu_option == "4") {
-                std::cout << "\nPodaj nazwe pociagu" << std::endl;
-                std::string name;
-                std::cin >> name;
-                std::cout << "\nPociag: " << name << std::endl;
-                std::cout << "Kursuje w dniach: " << human_day_representation(find_operating_day(name)) << std::endl;
+                Train t("",0,0000000);
+                do {
+                    std::cout << "\nPodaj nazwe pociagu:" << std::endl;
+                    std::string name;
+                    std::cin >> name;
+                    t=find_train(name);
+                    if (t.getClass() == 0) {
+                        std::cout << "ERROR: Nie znaleziono pociagu, lub jest blad w pisowni!" << std::endl;
+                    }
+                } while (t.getClass() == 0);
+                std::cout << "\nPociag: " << t.getName() << std::endl;
+                std::cout << "Kursuje w dniach: " << human_day_representation(t.getDays()) << std::endl;
                 std::cout << "" << std::endl;
             }
             if (menu_option != "1" and menu_option != "2" and menu_option != "3" and menu_option != "4" and

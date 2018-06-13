@@ -16,9 +16,9 @@ class Train
 {
 public:
     Train(std::string name, int classa, int days) : _name(name), _classa(classa),_days(days) {}
-    std::string get_name(){ return  _name;}                 //Zwraca nazwę pociągu
-    int get_class(){ return _classa;}                       //Zwraca klasę pociągu
-    int get_days(){ return  _days;}                         //Zwraca dni kursowania pociągu w formie "0100001"
+    std::string getName(){ return  _name;}                 //Zwraca nazwę pociągu
+    int getClass(){ return _classa;}                       //Zwraca klasę pociągu
+    int getDays(){ return  _days;}                         //Zwraca dni kursowania pociągu w formie "0100001"
 private:
     std::string _name;
     int _days;
@@ -70,6 +70,11 @@ Station find_station(std::string name_to_find);
 /* Funkcja otrzymuje: Nazwę stacji do znalezienia w pliku
  * Działanie: Wyszukuje nazwę stacji oraz jej numer
  * Funkcja zwraca: obiekt typu "Station" który zawiera nazwę i numer znalezionej stacji,jesli nie znalazł s.getNumber=0 */
+
+Train find_train(std::string name_to_find);
+/* Funkcja otrzymuje: Nazwę pociagu do znalezienia w pliku
+ * Działanie: Wyszukuje nazwę pociagu,klase oraz dni kursowania
+ * Funkcja zwraca: obiekt typu "Train" zawierajacy nazwie dni kursowania i klase ,jesli nie znalazł t.getNumber=0 */
 
 std::vector<Route> find_tour(Station _start, Station _end);
 /* Funkcja otrzymuje: dwa obiekty typu "Station" (początkową i końcową)
