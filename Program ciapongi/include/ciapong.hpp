@@ -69,7 +69,7 @@ private:
 Station find_station(std::string name_to_find);
 /* Funkcja otrzymuje: Nazwę stacji do znalezienia w pliku
  * Działanie: Wyszukuje nazwę stacji oraz jej numer
- * Funkcja zwraca: obiekt typu "Station" który zawiera nazwę i numer znalezionej stacji */
+ * Funkcja zwraca: obiekt typu "Station" który zawiera nazwę i numer znalezionej stacji,jesli nie znalazł s.getNumber=0 */
 
 std::vector<Route> find_tour(Station _start, Station _end);
 /* Funkcja otrzymuje: dwa obiekty typu "Station" (początkową i końcową)
