@@ -42,3 +42,5 @@ Torun
 Bielsko-Biala
 22
 Rzeszow_Glowny
+23
+Kielce
