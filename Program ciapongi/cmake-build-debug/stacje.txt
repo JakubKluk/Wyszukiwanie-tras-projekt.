@@ -38,3 +38,5 @@ Radom
 Sosnowiec
 20
 Torun
+21
+Bielsko-Biala
