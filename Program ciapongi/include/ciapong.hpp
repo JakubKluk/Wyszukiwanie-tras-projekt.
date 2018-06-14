@@ -72,6 +72,9 @@ Station find_station(std::string name_to_find);
  * Działanie: Wyszukuje nazwę stacji oraz jej numer
  * Funkcja zwraca: obiekt typu "Station" który zawiera nazwę i numer znalezionej stacji,jesli nie znalazł s.getNumber=0 */
 
+Station find_station2(std::string name_to_find2);
+/* Działanie odwrotne do find_station(dajesz numer::string)*/
+
 Train find_train(std::string name_to_find);
 /* Funkcja otrzymuje: Nazwę pociagu do znalezienia w pliku
  * Działanie: Wyszukuje nazwę pociagu,klase oraz dni kursowania

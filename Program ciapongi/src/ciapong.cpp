@@ -29,6 +29,31 @@ Station find_station(std::string name_to_find){
     plik_s.close();
     return s;
 }
+Station find_station2(std::string name_to_find2){
+    std::fstream plik_s;                            //nazwa którą będziemy się odwoływać do pliku
+    plik_s.open("stacje.txt", std::ios::in);        //otwarcie pliku
+    if(plik_s.good()==false)                          //sprawdza czy plik istnieje i zwraca true/false
+    {
+        std::cout<<"Nie ma pliku! (ERROR EXIT:find_station)"<<std::endl;
+        exit(0);                           //wyjebuje z programu jak nie może otworzyć
+    }
+
+    std::string line;                               //odczytana linijka z pliku
+    int line_nr=1;                                  //licznik numeru aktualnej linii
+    while(getline(plik_s,line)){                    //getline zwraca true dopóki jest linia (do końca pliku)
+
+        if (line==name_to_find2){
+            getline(plik_s,line);
+            Station s(line_nr/2,line);
+            plik_s.close();                         //Zamyka plik
+            return s;
+        }
+        line_nr++;
+    }
+    Station s(0,"");
+    plik_s.close();
+    return s;
+}
 Train find_train(std::string name_to_find){
     std::fstream plik_s;                            //nazwa którą będziemy się odwoływać do pliku
     plik_s.open("ciapongi.txt", std::ios::in);        //otwarcie pliku
